@@ -61,17 +61,17 @@
             </objects>
             <point key="canvasLocation" x="2596" y="859"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabs View Controller-->
         <scene sceneID="9ad-eR-uwV">
             <objects>
-                <tabBarController storyboardIdentifier="TabVC" id="pRu-2k-byD" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M0I-2b-qrj">
+                <tabBarController storyboardIdentifier="TabVC" wantsFullScreenLayout="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="pRu-2k-byD" customClass="TabsViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M0I-2b-qrj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
-                        <color key="barTintColor" systemColor="systemOrangeColor"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="A6j-gT-6rK" kind="relationship" relationship="viewControllers" id="tAZ-yT-Txf"/>
@@ -86,7 +86,7 @@
         <!--Info-->
         <scene sceneID="OIh-2j-MDv">
             <objects>
-                <viewController storyboardIdentifier="Info VC" id="DEY-RF-RZv" customClass="InfoViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoVC" id="DEY-RF-RZv" customClass="InfoViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xA8-DN-9Or">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,12 +234,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTc-jJ-R7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="137"/>
+            <point key="canvasLocation" x="1646" y="137"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="nrd-Rs-x0L">
             <objects>
-                <viewController id="Ure-OS-pea" customClass="LogInViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="Ure-OS-pea" customClass="LogInViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKY-yS-fzr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +291,7 @@
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="keA-UY-vPn" kind="presentation" modalPresentationStyle="fullScreen" id="TiT-AA-0YU"/>
+                                    <segue destination="keA-UY-vPn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="TiT-AA-0YU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to The Community?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-k9-R6Y">
@@ -374,7 +374,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="50v-cK-Yap">
             <objects>
-                <viewController id="keA-UY-vPn" customClass="SignUpViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SigninVC" id="keA-UY-vPn" customClass="SignUpViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DUJ-dJ-9d7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -397,7 +397,7 @@
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ure-OS-pea" kind="presentation" modalPresentationStyle="fullScreen" id="fKZ-uo-uiu"/>
+                                    <segue destination="Ure-OS-pea" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="fKZ-uo-uiu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Creat Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgq-0f-pDI">
@@ -493,7 +493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDP-A5-xHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1131.8840579710145" y="857.8125"/>
+            <point key="canvasLocation" x="1155" y="858"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KQW-CX-A8D">

@@ -78,8 +78,19 @@ class LogInViewController: UIViewController, UITextViewDelegate {
                     
                     {
                         print("Login Succesfully")
-                        let mainVC = (storyboard?.instantiateViewController(withIdentifier: "TabVC"))! as UIViewController
-                        present(mainVC, animated: true, completion: nil)
+//                        let HomeVC = (storyboard?.instantiateViewController(withIdentifier: "TabVC"))! as UIViewController
+//                        present(HomeVC, animated: true, completion: nil)
+                        if let TabVC = (storyboard!.instantiateViewController(withIdentifier: "TabVC") as? UITabBarController) {
+                            self.present(TabVC, animated: true, completion: nil)
+                            //self.show(TabVC, sender: nil)
+//                            self.modalPresentationStyle = .fullScreen
+//                            self.modalTransitionStyle = .crossDissolve
+
+                        }
+                        
+                        
+                        
+                        
                     }else if (objectentity.username == username && objectentity.password != password) || (objectentity.username != username && objectentity.password == password) || (objectentity.username != username && objectentity.password != password)
                     {
 
