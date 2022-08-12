@@ -64,7 +64,7 @@
         <!--Tabs View Controller-->
         <scene sceneID="9ad-eR-uwV">
             <objects>
-                <tabBarController storyboardIdentifier="TabVC" wantsFullScreenLayout="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="pRu-2k-byD" customClass="TabsViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabVC" wantsFullScreenLayout="YES" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="pRu-2k-byD" customClass="TabsViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M0I-2b-qrj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -291,7 +291,7 @@
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="keA-UY-vPn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="TiT-AA-0YU"/>
+                                    <segue destination="keA-UY-vPn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="TiT-AA-0YU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to The Community?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-k9-R6Y">
@@ -397,7 +397,7 @@
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ure-OS-pea" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="fKZ-uo-uiu"/>
+                                    <segue destination="Ure-OS-pea" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fKZ-uo-uiu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Creat Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgq-0f-pDI">
@@ -523,7 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dsU-88-IXR"/>
+        <segue reference="fKZ-uo-uiu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell.fill" catalog="system" width="128" height="124"/>

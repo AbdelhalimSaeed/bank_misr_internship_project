@@ -83,8 +83,8 @@ class LogInViewController: UIViewController, UITextViewDelegate {
                         if let TabVC = (storyboard!.instantiateViewController(withIdentifier: "TabVC") as? UITabBarController) {
                             self.present(TabVC, animated: true, completion: nil)
                             //self.show(TabVC, sender: nil)
-//                            self.modalPresentationStyle = .fullScreen
-//                            self.modalTransitionStyle = .crossDissolve
+                            self.modalPresentationStyle = .fullScreen
+                            self.modalTransitionStyle = .crossDissolve
 
                         }
                         
