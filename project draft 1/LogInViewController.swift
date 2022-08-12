@@ -44,7 +44,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
 
                 let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-
+                alert.view.tintColor = UIColor.orange
                 alert.addAction(ok)
                 alert.addAction(cancel)
 
@@ -78,7 +78,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
                     
                     {
                         print("Login Succesfully")
-                        let mainVC = (storyboard?.instantiateViewController(withIdentifier: "HomeVC"))! as UIViewController
+                        let mainVC = (storyboard?.instantiateViewController(withIdentifier: "TabVC"))! as UIViewController
                         present(mainVC, animated: true, completion: nil)
                     }else if (objectentity.username == username && objectentity.password != password) || (objectentity.username != username && objectentity.password == password) || (objectentity.username != username && objectentity.password != password)
                     {
@@ -87,7 +87,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
 
                         let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-
+                        alert.view.tintColor = UIColor.orange
                         alert.addAction(ok)
                         alert.addAction(cancel)
                         self.present(alert, animated: true, completion: nil)

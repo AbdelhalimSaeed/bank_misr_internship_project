@@ -33,12 +33,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yw4-VC-v2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="50"/>
+            <point key="canvasLocation" x="1945" y="859"/>
         </scene>
         <!--Cart-->
         <scene sceneID="xBd-7P-e1P">
             <objects>
-                <viewController id="3KD-pF-rHO" customClass="CartViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartVC" id="3KD-pF-rHO" customClass="CartViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hdF-T9-bC0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,18 +59,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geP-ZL-3cF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="50"/>
+            <point key="canvasLocation" x="2596" y="859"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9ad-eR-uwV">
             <objects>
-                <tabBarController id="pRu-2k-byD" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabVC" id="pRu-2k-byD" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M0I-2b-qrj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
-                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
+                        <color key="barTintColor" systemColor="systemOrangeColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="A6j-gT-6rK" kind="relationship" relationship="viewControllers" id="tAZ-yT-Txf"/>
@@ -80,12 +81,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXq-qL-eMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="-651"/>
+            <point key="canvasLocation" x="2506" y="137"/>
         </scene>
         <!--Info-->
         <scene sceneID="OIh-2j-MDv">
             <objects>
-                <viewController id="DEY-RF-RZv" customClass="InfoViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Info VC" id="DEY-RF-RZv" customClass="InfoViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xA8-DN-9Or">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +205,9 @@
                         <viewLayoutGuide key="safeArea" id="olb-dB-KIf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="FRM-pe-C68"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="FRM-pe-C68">
+                        <color key="badgeColor" systemColor="systemPinkColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="lblHelp" destination="n68-0P-J92" id="Vlr-6K-NjY"/>
                         <outlet property="lblNotifications" destination="egD-3d-I6P" id="roY-br-aPk"/>
@@ -214,12 +217,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYd-IZ-tg0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2420" y="50"/>
+            <point key="canvasLocation" x="3232" y="858"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="yEJ-v1-rcf">
             <objects>
                 <navigationController id="gAt-zk-e5P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.fill" catalog="system" id="9tX-6y-oS5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WQH-lx-MgK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -230,7 +234,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTc-jJ-R7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-343" y="858"/>
+            <point key="canvasLocation" x="1132" y="137"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="nrd-Rs-x0L">
@@ -319,7 +323,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0b-vh-FYF">
-                                <rect key="frame" x="-53" y="316" width="354" height="52"/>
+                                <rect key="frame" x="-51" y="341" width="354" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
@@ -432,6 +436,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="keA-UY-vPn" eventType="touchUpInside" id="6t4-gZ-2Sk"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="g9O-uz-LCs">
                                 <rect key="frame" x="40" y="522" width="334" height="34"/>
@@ -516,7 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fKZ-uo-uiu"/>
+        <segue reference="dsU-88-IXR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
@@ -542,6 +549,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

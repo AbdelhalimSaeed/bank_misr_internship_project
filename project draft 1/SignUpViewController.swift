@@ -14,25 +14,23 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfpassword: UITextField!
-    
     @IBOutlet weak var signupView: UIView!
-    
     @IBOutlet weak var signupButton: UIButton!
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
      
-    var users: [UserInfo]?
+    // var users: [UserInfo]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signupView.layer.cornerRadius = 20
         signupButton.layer.cornerRadius = 20
-        fetchInfo()
+        //fetchInfo()
     }
-    func fetchInfo(){
-        self.users = try! context.fetch(UserInfo.fetchRequest())
-    }
+    //func fetchInfo(){
+    //    self.users = try! context.fetch(UserInfo.fetchRequest())
+    //}
     
     @IBAction func terms(_ sender: UIButton
     ) {
@@ -45,14 +43,14 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    @IBAction func signup(_ sender: Any) {
+    @IBAction func signupButton(_ sender: Any) {
         if txtName.text == "" || txtEmail.text == "" || txtPassword.text == "" || txtConfpassword.text == ""
            {
                let alert = UIAlertController(title: "Information", message: "It's mandatorty to enter all the fields", preferredStyle: .alert)
 
                let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-
+            alert.view.tintColor = UIColor.orange
                alert.addAction(ok)
                alert.addAction(cancel)
 
@@ -67,7 +65,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
 
                let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-
+            alert.view.tintColor = UIColor.orange
                alert.addAction(ok)
                alert.addAction(cancel)
 
