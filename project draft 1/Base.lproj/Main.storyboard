@@ -273,7 +273,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQO-wI-vB5">
-                                <rect key="frame" x="81" y="656" width="253" height="42"/>
+                                <rect key="frame" x="80.5" y="656" width="253" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -318,9 +318,8 @@
                                     <action selector="remember:" destination="Ure-OS-pea" eventType="touchUpInside" id="Lny-7Z-gpP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0b-vh-FYF">
-                                <rect key="frame" x="-51" y="341" width="354" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Log In Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0b-vh-FYF">
+                                <rect key="frame" x="20" y="341" width="283" height="52"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -332,13 +331,17 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhatsApp Image 2022-08-12 at 2.31.25 PM" translatesAutoresizingMaskIntoConstraints="NO" id="YtJ-yO-9b6">
-                                <rect key="frame" x="52" y="125" width="116" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="WhatsApp Image 2022-08-12 at 2.31.25 PM" translatesAutoresizingMaskIntoConstraints="NO" id="YtJ-yO-9b6">
+                                <rect key="frame" x="54" y="125" width="116" height="94"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H6d-rf-Lv3"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l0b-vh-FYF" firstAttribute="leading" secondItem="H6d-rf-Lv3" secondAttribute="leading" constant="20" id="CUk-h8-S3P"/>
+                            <constraint firstItem="l0b-vh-FYF" firstAttribute="width" secondItem="rKY-yS-fzr" secondAttribute="width" multiplier="0.683575" id="KAf-E4-c9o"/>
+                            <constraint firstItem="YtJ-yO-9b6" firstAttribute="width" secondItem="rKY-yS-fzr" secondAttribute="height" multiplier="29:224" id="NaN-YU-MTj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6tT-pv-yAy"/>
                     <connections>
@@ -537,7 +540,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dsU-88-IXR"/>
+        <segue reference="fKZ-uo-uiu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WhatsApp Image 2022-08-12 at 2.31.25 PM" width="24" height="23.666666030883789"/>
