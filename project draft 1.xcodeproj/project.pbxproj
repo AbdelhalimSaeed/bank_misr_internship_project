@@ -14,6 +14,8 @@
 		96058AC428A6551800103303 /* project_draft_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96058AC228A6551800103303 /* project_draft_1.xcdatamodeld */; };
 		96058AC628A6551A00103303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96058AC528A6551A00103303 /* Assets.xcassets */; };
 		96058AC928A6551A00103303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96058AC728A6551A00103303 /* LaunchScreen.storyboard */; };
+		96544A0828A834B800055B22 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96544A0728A834B800055B22 /* Cart.storyboard */; };
+		96544A1F28A8515000055B22 /* CartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96544A1E28A8515000055B22 /* CartScreenViewController.swift */; };
 		96839A9728A6D04B00631F02 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96839A9628A6D04B00631F02 /* TabsViewController.swift */; };
 		96B95B7628A6ACB500435780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B95B7528A6ACB500435780 /* SignUpViewController.swift */; };
 		96B95B7928A6ACD400435780 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B95B7828A6ACD400435780 /* LogInViewController.swift */; };
@@ -33,6 +35,8 @@
 		96058AC528A6551A00103303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96058AC828A6551A00103303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96058ACA28A6551A00103303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96544A0728A834B800055B22 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		96544A1E28A8515000055B22 /* CartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreenViewController.swift; sourceTree = "<group>"; };
 		96839A9628A6D04B00631F02 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		96B95B7528A6ACB500435780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		96B95B7828A6ACD400435780 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		96058AAD28A6551800103303 = {
 			isa = PBXGroup;
 			children = (
+				96544A0628A8349B00055B22 /* Cart */,
 				96B95B8428A6B3A600435780 /* UserInfo+CoreDataClass.swift */,
 				96B95B8528A6B3A600435780 /* UserInfo+CoreDataProperties.swift */,
 				96058AB828A6551800103303 /* project draft 1 */,
@@ -74,10 +79,10 @@
 		96058AB828A6551800103303 /* project draft 1 */ = {
 			isa = PBXGroup;
 			children = (
+				96B95B7C28A6ACEF00435780 /* CartViewController.swift */,
 				96058AB928A6551800103303 /* AppDelegate.swift */,
 				96058ABB28A6551800103303 /* SceneDelegate.swift */,
 				96B95B7F28A6AD0800435780 /* HomeViewController.swift */,
-				96B95B7C28A6ACEF00435780 /* CartViewController.swift */,
 				96058ABD28A6551800103303 /* InfoViewController.swift */,
 				96B95B7528A6ACB500435780 /* SignUpViewController.swift */,
 				96B95B7828A6ACD400435780 /* LogInViewController.swift */,
@@ -89,6 +94,15 @@
 				96839A9628A6D04B00631F02 /* TabsViewController.swift */,
 			);
 			path = "project draft 1";
+			sourceTree = "<group>";
+		};
+		96544A0628A8349B00055B22 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				96544A0728A834B800055B22 /* Cart.storyboard */,
+				96544A1E28A8515000055B22 /* CartScreenViewController.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +165,7 @@
 				96058AC928A6551A00103303 /* LaunchScreen.storyboard in Resources */,
 				96058AC628A6551A00103303 /* Assets.xcassets in Resources */,
 				96058AC128A6551800103303 /* Main.storyboard in Resources */,
+				96544A0828A834B800055B22 /* Cart.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +187,7 @@
 				96058ABC28A6551800103303 /* SceneDelegate.swift in Sources */,
 				96058AC428A6551800103303 /* project_draft_1.xcdatamodeld in Sources */,
 				96B95B7628A6ACB500435780 /* SignUpViewController.swift in Sources */,
+				96544A1F28A8515000055B22 /* CartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
