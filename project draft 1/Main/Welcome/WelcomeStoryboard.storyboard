@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-495" y="26"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="uxY-j3-OMh">
             <objects>
-                <viewController id="Iwf-gg-XSL" sceneMemberID="viewController">
+                <viewController id="Iwf-gg-XSL" customClass="WelcomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyW-cm-B1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

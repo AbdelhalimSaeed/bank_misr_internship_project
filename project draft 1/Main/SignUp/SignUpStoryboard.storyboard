@@ -17,10 +17,10 @@
             </objects>
             <point key="canvasLocation" x="-253" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="4BZ-1V-Ima">
             <objects>
-                <viewController id="y5J-Lz-XZB" sceneMemberID="viewController">
+                <viewController id="y5J-Lz-XZB" customClass="SignUpViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUK-Ah-9hf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
