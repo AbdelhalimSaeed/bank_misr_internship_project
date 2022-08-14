@@ -58,6 +58,9 @@
                                 <state key="normal" title="Sign Up from Here">
                                     <color key="titleColor" red="0.9827628732" green="0.26502346989999997" blue="0.0132602863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QX8-AQ-nXS" kind="presentation" id="Hrr-cQ-6Lf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to The Community?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unV-w5-Ekf">
                                 <rect key="frame" x="113" y="695" width="188" height="21"/>
