@@ -14,10 +14,15 @@
 		96058AC428A6551800103303 /* project_draft_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96058AC228A6551800103303 /* project_draft_1.xcdatamodeld */; };
 		96058AC628A6551A00103303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96058AC528A6551A00103303 /* Assets.xcassets */; };
 		96058AC928A6551A00103303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96058AC728A6551A00103303 /* LaunchScreen.storyboard */; };
-		966F852028A83970006AEE65 /* AStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966F851F28A83970006AEE65 /* AStoryboard.storyboard */; };
-		966F852428A839A7006AEE65 /* BStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966F852328A839A7006AEE65 /* BStoryboard.storyboard */; };
+		964DD4D328A920910027D9A6 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4D228A920910027D9A6 /* SignUpStoryboard.storyboard */; };
+		964DD4D628A920A20027D9A6 /* LogInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4D528A920A20027D9A6 /* LogInStoryboard.storyboard */; };
+		964DD4D928A920F80027D9A6 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4D828A920F80027D9A6 /* HomeStoryboard.storyboard */; };
+		964DD4DC28A9210C0027D9A6 /* CartStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4DB28A9210C0027D9A6 /* CartStoryboard.storyboard */; };
+		964DD4DF28A9212D0027D9A6 /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4DE28A9212D0027D9A6 /* InfoStoryboard.storyboard */; };
+		964DD4E828A922E70027D9A6 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964DD4E728A922E70027D9A6 /* CartViewController.swift */; };
+		964DD4F128A9246E0027D9A6 /* WelcomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4F028A9246E0027D9A6 /* WelcomeStoryboard.storyboard */; };
+		964DD4F428A924850027D9A6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964DD4F328A924850027D9A6 /* WelcomeViewController.swift */; };
 		96839A9728A6D04B00631F02 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96839A9628A6D04B00631F02 /* TabsViewController.swift */; };
-		968E4FCB28A87D4300F76988 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E4FCA28A87D4300F76988 /* Products.swift */; };
 		96B95B7628A6ACB500435780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B95B7528A6ACB500435780 /* SignUpViewController.swift */; };
 		96B95B7928A6ACD400435780 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B95B7828A6ACD400435780 /* LogInViewController.swift */; };
 		96B95B7D28A6ACEF00435780 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B95B7C28A6ACEF00435780 /* CartViewController.swift */; };
@@ -36,10 +41,15 @@
 		96058AC528A6551A00103303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96058AC828A6551A00103303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96058ACA28A6551A00103303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		966F851F28A83970006AEE65 /* AStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AStoryboard.storyboard; sourceTree = "<group>"; };
-		966F852328A839A7006AEE65 /* BStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4D228A920910027D9A6 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4D528A920A20027D9A6 /* LogInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4D828A920F80027D9A6 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4DB28A9210C0027D9A6 /* CartStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4DE28A9212D0027D9A6 /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4E728A922E70027D9A6 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		964DD4F028A9246E0027D9A6 /* WelcomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeStoryboard.storyboard; sourceTree = "<group>"; };
+		964DD4F328A924850027D9A6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		96839A9628A6D04B00631F02 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
-		968E4FCA28A87D4300F76988 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		96B95B7528A6ACB500435780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		96B95B7828A6ACD400435780 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		96B95B7C28A6ACEF00435780 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +94,6 @@
 				96058AB928A6551800103303 /* AppDelegate.swift */,
 				96058ABB28A6551800103303 /* SceneDelegate.swift */,
 				96B95B7C28A6ACEF00435780 /* CartViewController.swift */,
-				968E4FD028A87DA200F76988 /* Group A */,
-				966F852328A839A7006AEE65 /* BStoryboard.storyboard */,
 				96058AC528A6551A00103303 /* Assets.xcassets */,
 				96058AC728A6551A00103303 /* LaunchScreen.storyboard */,
 				96058ACA28A6551A00103303 /* Info.plist */,
@@ -95,25 +103,72 @@
 			path = "project draft 1";
 			sourceTree = "<group>";
 		};
+		964DD4E128A9224A0027D9A6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				964DD4D228A920910027D9A6 /* SignUpStoryboard.storyboard */,
+				96B95B7528A6ACB500435780 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		964DD4E228A922550027D9A6 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				964DD4D528A920A20027D9A6 /* LogInStoryboard.storyboard */,
+				96B95B7828A6ACD400435780 /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		964DD4E328A922650027D9A6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				964DD4D828A920F80027D9A6 /* HomeStoryboard.storyboard */,
+				96B95B7F28A6AD0800435780 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		964DD4E428A922700027D9A6 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				964DD4DB28A9210C0027D9A6 /* CartStoryboard.storyboard */,
+				964DD4E728A922E70027D9A6 /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		964DD4E528A922780027D9A6 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				964DD4DE28A9212D0027D9A6 /* InfoStoryboard.storyboard */,
+				96058ABD28A6551800103303 /* InfoViewController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		964DD4EF28A924550027D9A6 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				964DD4F028A9246E0027D9A6 /* WelcomeStoryboard.storyboard */,
+				964DD4F328A924850027D9A6 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		968E4FCD28A87D5F00F76988 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				96058ABF28A6551800103303 /* Main.storyboard */,
-				96B95B7F28A6AD0800435780 /* HomeViewController.swift */,
-				96058ABD28A6551800103303 /* InfoViewController.swift */,
-				96B95B7828A6ACD400435780 /* LogInViewController.swift */,
-				96B95B7528A6ACB500435780 /* SignUpViewController.swift */,
+				964DD4EF28A924550027D9A6 /* Welcome */,
+				964DD4E228A922550027D9A6 /* LogIn */,
+				964DD4E128A9224A0027D9A6 /* SignUp */,
+				964DD4E328A922650027D9A6 /* Home */,
+				964DD4E528A922780027D9A6 /* Info */,
+				964DD4E428A922700027D9A6 /* Cart */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		968E4FD028A87DA200F76988 /* Group A */ = {
-			isa = PBXGroup;
-			children = (
-				966F851F28A83970006AEE65 /* AStoryboard.storyboard */,
-				968E4FCA28A87D4300F76988 /* Products.swift */,
-			);
-			path = "Group A";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +228,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964DD4DC28A9210C0027D9A6 /* CartStoryboard.storyboard in Resources */,
 				96058AC928A6551A00103303 /* LaunchScreen.storyboard in Resources */,
+				964DD4D328A920910027D9A6 /* SignUpStoryboard.storyboard in Resources */,
+				964DD4D928A920F80027D9A6 /* HomeStoryboard.storyboard in Resources */,
 				96058AC628A6551A00103303 /* Assets.xcassets in Resources */,
-				966F852428A839A7006AEE65 /* BStoryboard.storyboard in Resources */,
-				966F852028A83970006AEE65 /* AStoryboard.storyboard in Resources */,
+				964DD4F128A9246E0027D9A6 /* WelcomeStoryboard.storyboard in Resources */,
+				964DD4DF28A9212D0027D9A6 /* InfoStoryboard.storyboard in Resources */,
 				96058AC128A6551800103303 /* Main.storyboard in Resources */,
+				964DD4D628A920A20027D9A6 /* LogInStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,10 +253,11 @@
 				96B95B8628A6B3A600435780 /* UserInfo+CoreDataClass.swift in Sources */,
 				96B95B7D28A6ACEF00435780 /* CartViewController.swift in Sources */,
 				96839A9728A6D04B00631F02 /* TabsViewController.swift in Sources */,
+				964DD4F428A924850027D9A6 /* WelcomeViewController.swift in Sources */,
+				964DD4E828A922E70027D9A6 /* CartViewController.swift in Sources */,
 				96B95B8028A6AD0800435780 /* HomeViewController.swift in Sources */,
 				96B95B7928A6ACD400435780 /* LogInViewController.swift in Sources */,
 				96058ABC28A6551800103303 /* SceneDelegate.swift in Sources */,
-				968E4FCB28A87D4300F76988 /* Products.swift in Sources */,
 				96058AC428A6551800103303 /* project_draft_1.xcdatamodeld in Sources */,
 				96B95B7628A6ACB500435780 /* SignUpViewController.swift in Sources */,
 			);
