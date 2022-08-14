@@ -22,7 +22,7 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let Cell = Table.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-           Cell.textLabel?.text = "Mario is the best"
+           Cell.textLabel?.text = "Mario"
            return Cell
        }
 
