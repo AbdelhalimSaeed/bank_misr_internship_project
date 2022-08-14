@@ -7,14 +7,24 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var Table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           return 7
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           let Cell = Table.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+           Cell.textLabel?.text = "Mario is the best"
+           return Cell
+       }
 
     /*
     // MARK: - Navigation
