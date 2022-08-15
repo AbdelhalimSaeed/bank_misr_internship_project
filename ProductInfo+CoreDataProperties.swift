@@ -16,7 +16,7 @@ extension ProductInfo {
         return NSFetchRequest<ProductInfo>(entityName: "ProductInfo")
     }
 
-    @NSManaged public var boughtItemsCount: Bool
+    @NSManaged public var boughtItemsCount: Int64
     @NSManaged public var desc: String?
     @NSManaged public var image: String?
     @NSManaged public var isAddedToCart: Bool

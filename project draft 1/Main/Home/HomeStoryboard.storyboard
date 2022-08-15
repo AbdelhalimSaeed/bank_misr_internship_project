@@ -173,6 +173,7 @@
                     <connections>
                         <outlet property="descriptiontxt" destination="5f4-eN-Zdr" id="mDq-ae-m7I"/>
                         <outlet property="gotocartbtn" destination="oQv-nf-URS" id="9tH-Uc-5kq"/>
+                        <outlet property="im" destination="Gh2-gg-ghf" id="e95-2h-JmF"/>
                         <outlet property="img" destination="b6T-eB-lDc" id="Zco-XO-c5q"/>
                         <outlet property="maintabel" destination="IF9-NL-ePg" id="XEK-dc-Sis"/>
                         <outlet property="nametxt" destination="bWb-fJ-ILI" id="rHa-lf-xmv"/>

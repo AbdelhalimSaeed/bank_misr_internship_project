@@ -10,14 +10,16 @@ import Foundation
 import UIKit
 import CoreData
 //var products:[ProductInfo] = []
-
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate
 {
     
     
     var result = NSArray()
-
+    
+    var items: [ProductInfo] = []
+   
     
     @IBOutlet weak var maintabel: UITableView!
 
@@ -28,7 +30,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var pricetxt: UIButton!
     
     @IBOutlet weak var descriptiontxt: UILabel!
-    
+ 
     
     @IBOutlet weak var gotocartbtn: UIButton!
     
@@ -44,33 +46,35 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         maintabel.dataSource = self
         maintabel.delegate = self
         
-        
-        
-        
+        fetchProduct()
         
     }
     
     //func CheckForProduct (
     
+    func fetchProduct(){
+        do{
+            self.items = try context.fetch(ProductInfo.fetchRequest())
+            DispatchQueue.main.async{
+                self.maintabel.reloadData()
+            }
+       }
+        catch{
+            
+        }
+     }
     
     
-/*    @IBAction func didTapButton(){
-        present(Cart(), animated: true)
-    }*/
-    
-    
-    
-    let mainarray = Array(repeating: "Item", count: 10)
-    
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.mainarray.count
+        return items.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath)
-        cell.textLabel?.text = self.mainarray[indexPath.row]
+        let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath)
+        let product = self.items[indexPath.row]
+        cell.textLabel?.text = product.image
         return cell
     }
     
