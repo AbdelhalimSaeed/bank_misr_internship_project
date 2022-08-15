@@ -8,16 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LogInStoryboard-->
-        <scene sceneID="dGw-Ha-bbk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LogInStoryboard" referencedIdentifier="LogInStoryboard" id="h6R-w6-Nfa" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="CgS-i2-tm9"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kkP-o3-RTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-495" y="26"/>
-        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="uxY-j3-OMh">
             <objects>
@@ -77,6 +67,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpq-ZN-QVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="166.66666666666669" y="92.410714285714278"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="tUE-bS-OsW">
+            <objects>
+                <viewControllerPlaceholder id="7XB-vy-MZg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icz-z0-UIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="18"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="mwb-7o-ADx">
+            <objects>
+                <viewControllerPlaceholder id="oOx-az-kJI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49z-Ul-xCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="69"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="U88-Ed-DhV">
+            <objects>
+                <viewControllerPlaceholder id="4o2-HJ-X5O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5Q-tw-ep8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="135"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="d4O-nd-eEZ">
+            <objects>
+                <viewControllerPlaceholder id="hLK-Hq-L1r" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrT-gA-DJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="187"/>
         </scene>
     </scenes>
     <resources>
