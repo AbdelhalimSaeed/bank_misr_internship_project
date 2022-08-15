@@ -47,6 +47,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         maintabel.delegate = self
         
         fetchProduct()
+        productsExists()
         
     }
     
@@ -64,8 +65,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
      }
     
-    
+    func productsExists()->Bool
+        {
+            do
+            {   let app = UIApplication.shared.delegate as! AppDelegate
+                
+                let context = app.persistentContainer.viewContext
 
+                let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductInfo")
+                
+                
+                
+                result = try  context.fetch(fetchrequest) as NSArray
+                if(result.count == 0)
+                {
+                    return false
+                }
+                else{
+                    fetchProduct()
+                    return true
+                }
+        } catch  {  }
+            return false
+
+        }
+
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return items.count
     }
