@@ -128,14 +128,6 @@
                                     <segue destination="6l7-eg-3aV" kind="show" id="X5y-ZC-fW2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qx-xU-4g5">
-                                <rect key="frame" x="177" y="525" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Price">
-                                    <color key="titleColor" name="red"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f4-eN-Zdr">
                                 <rect key="frame" x="177" y="604" width="228" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -166,6 +158,13 @@
                                 <rect key="frame" x="160" y="41" width="93" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdE-9U-gD1">
+                                <rect key="frame" x="177" y="525" width="94" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" name="red"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J8H-7W-NCI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -176,7 +175,7 @@
                         <outlet property="img" destination="b6T-eB-lDc" id="Zco-XO-c5q"/>
                         <outlet property="maintabel" destination="IF9-NL-ePg" id="XEK-dc-Sis"/>
                         <outlet property="nametxt" destination="bWb-fJ-ILI" id="rHa-lf-xmv"/>
-                        <outlet property="pricetxt" destination="0qx-xU-4g5" id="89c-Ul-z2B"/>
+                        <outlet property="pricetxt" destination="pdE-9U-gD1" id="SpI-Ix-fzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3r-uU-Boq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

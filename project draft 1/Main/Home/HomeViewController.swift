@@ -27,7 +27,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var nametxt: UILabel!
     
-    @IBOutlet weak var pricetxt: UIButton!
+    @IBOutlet weak var pricetxt: UILabel!
     
     @IBOutlet weak var descriptiontxt: UILabel!
  
@@ -106,20 +106,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! HomeTableViewCell
         let product = self.items[indexPath.row]
         //cell.textLabel?.text = product.image
-        
         // we need to convert the string to an image
         
         //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
-        
+
         cell.setupCell(img: UIImage.init(named: "\(String(describing: img))")!)
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let image = items.[indexPath.row]
-            imageView.image = UIImage.init(named: "ImageName")
+            //let image = tableViewData[indexPath.row]
+            //imageView.image = UIImage.init(named: "ImageName")
+        
+        let tableinfo = self.items[indexPath.row]
+        img.image = UIImage.init(named: "\(String(describing: tableinfo.image))")
+        nametxt.text = tableinfo.name
+        pricetxt.text = String("\(tableinfo.price)")
+        descriptiontxt.text = tableinfo.desc
         }
+    
+    
+//    img: UIImageVi
+//    nametxt: UILab
+//    pricetxt: UIBu
+//    descriptiontxt
     
     
     @IBAction func heartbtn(_ sender: UIButton) {
