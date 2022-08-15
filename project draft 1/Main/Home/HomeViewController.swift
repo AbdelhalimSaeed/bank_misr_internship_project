@@ -46,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         maintabel.dataSource = self
         maintabel.delegate = self
         
-        fetchProduct()
+        //fetchProduct()
         productsExists()
         
     }
@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
      }
     
-    func productsExists()->Bool
+    func productsExists()
         {
             do
             {   let app = UIApplication.shared.delegate as! AppDelegate
@@ -79,14 +79,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 result = try  context.fetch(fetchrequest) as NSArray
                 if(result.count == 0)
                 {
-                    return false
-                }
+                    let alert = UIAlertController(title: "ERROR", message: "No items avilable", preferredStyle: .alert)
+
+                    let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                    alert.view.tintColor = UIColor.red
+                    alert.addAction(ok)
+                    alert.addAction(cancel)
+
+                    self.present(alert, animated: true, completion: nil)                }
                 else{
                     fetchProduct()
-                    return true
                 }
         } catch  {  }
-            return false
 
         }
 
