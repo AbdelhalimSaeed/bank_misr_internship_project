@@ -12,10 +12,11 @@ import CoreData
 //var products:[ProductInfo] = []
 
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate
 {
     
     
+    var result = NSArray()
 
     
     @IBOutlet weak var maintabel: UITableView!
@@ -42,7 +43,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         maintabel.dataSource = self
         maintabel.delegate = self
+        
+        
+        
+        
+        
     }
+    
+    //func CheckForProduct (
     
     
     
