@@ -8,6 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LogInViewController-->
+        <scene sceneID="gST-PV-t5b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogInStoryboard" referencedIdentifier="LogInViewController" id="Hqz-UW-ahH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ayT-Ih-wZ5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXH-EA-Plf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="9"/>
+        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="uxY-j3-OMh">
             <objects>
@@ -24,6 +34,9 @@
                                 <state key="normal" title="Log In Now">
                                     <color key="titleColor" name="red"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Hqz-UW-ahH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UZs-Mc-46X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to the community?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmv-T7-6cj">
                                 <rect key="frame" x="142" y="738" width="144" height="16"/>
@@ -63,6 +76,9 @@
                         <viewLayoutGuide key="safeArea" id="jum-Wb-fPX"/>
                         <color key="backgroundColor" name="red"/>
                     </view>
+                    <connections>
+                        <outlet property="loginbtn" destination="NX0-cK-qHb" id="vJb-RE-Oaz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpq-ZN-QVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
