@@ -23,11 +23,11 @@ class CartTableViewCell: UITableViewCell {
     
     
     
-    func setupCell( img: UIImage, nm: String, pr: Double)
+    func setupCell( img: UIImage, nm: String, pr: String)
     {
         dishimage.image = img
         nametxt.text = nm
-        pricetxt.text = String(/(pr)
+        pricetxt.text = pr
 
     }
 

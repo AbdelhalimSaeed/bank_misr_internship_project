@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Xd-oL-Qqs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -52,6 +52,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="7Xd-oL-Qqs" eventType="touchUpInside" id="Kqx-mT-zJq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdS-f4-d3u">
                                 <rect key="frame" x="144" y="719" width="127" height="30"/>
@@ -86,8 +89,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="loginView" destination="NUF-7G-Ht8" id="cDk-HP-wZf"/>
                         <outlet property="loginbtn" destination="1sr-nN-PAp" id="DeA-9u-TFI"/>
+                        <outlet property="loginview" destination="NUF-7G-Ht8" id="vtT-lh-vbT"/>
                         <outlet property="passwordtxt" destination="RGG-zi-1yo" id="bXX-nk-UW4"/>
                         <outlet property="usernametxt" destination="IDW-UH-eej" id="Ge1-bh-grb"/>
                     </connections>

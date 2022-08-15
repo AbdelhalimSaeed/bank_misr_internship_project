@@ -2,7 +2,7 @@
 //  ProductInfo+CoreDataClass.swift
 //  project draft 1
 //
-//  Created by Mayar Adel on 8/14/22.
+//  Created by Mayar Adel on 8/15/22.
 //
 //
 

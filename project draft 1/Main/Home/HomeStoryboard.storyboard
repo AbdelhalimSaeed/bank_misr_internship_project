@@ -53,7 +53,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="127" id="qRP-vn-mJF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="maincell" rowHeight="127" id="qRP-vn-mJF">
                                         <rect key="frame" x="0.0" y="28" width="169" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qRP-vn-mJF" id="key-Ap-ozB">
@@ -112,6 +112,9 @@
                                 <state key="selected" image="heart.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
+                                <connections>
+                                    <action selector="heartbtn:" destination="EaQ-rQ-6Qc" eventType="touchUpInside" id="mJl-rZ-sbX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY5-Wm-baC">
                                 <rect key="frame" x="279" y="525" width="120" height="34"/>
@@ -122,7 +125,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6l7-eg-3aV" kind="show" id="AHY-kb-HDm"/>
+                                    <segue destination="6l7-eg-3aV" kind="show" id="X5y-ZC-fW2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qx-xU-4g5">
@@ -167,6 +170,14 @@
                         <viewLayoutGuide key="safeArea" id="J8H-7W-NCI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptiontxt" destination="5f4-eN-Zdr" id="mDq-ae-m7I"/>
+                        <outlet property="gotocartbtn" destination="oQv-nf-URS" id="9tH-Uc-5kq"/>
+                        <outlet property="img" destination="b6T-eB-lDc" id="Zco-XO-c5q"/>
+                        <outlet property="maintabel" destination="IF9-NL-ePg" id="XEK-dc-Sis"/>
+                        <outlet property="nametxt" destination="bWb-fJ-ILI" id="rHa-lf-xmv"/>
+                        <outlet property="pricetxt" destination="0qx-xU-4g5" id="89c-Ul-z2B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3r-uU-Boq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

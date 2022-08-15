@@ -8,25 +8,61 @@
 
 import Foundation
 import UIKit
+import CoreData
+//var products:[ProductInfo] = []
 
-class HomeViewController: UIViewController, UITableViewDataSource{
+
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+    
+    
+
+    
+    @IBOutlet weak var maintabel: UITableView!
+
+    @IBOutlet weak var img: UIImageView!
+    
+    @IBOutlet weak var nametxt: UILabel!
+    
+    @IBOutlet weak var pricetxt: UIButton!
+    
+    @IBOutlet weak var descriptiontxt: UILabel!
+    
+    
+    @IBOutlet weak var gotocartbtn: UIButton!
+    
     override func viewDidLoad(){
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
-        tableView.dataSource = self
+        
+        
+        maintabel.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
+        
+        gotocartbtn.layer.cornerRadius = 35
+        img.layer.cornerRadius = 20
+        
+        maintabel.dataSource = self
+        maintabel.delegate = self
     }
+    
+    
+    
 /*    @IBAction func didTapButton(){
         present(Cart(), animated: true)
     }*/
     
-    @IBOutlet weak var tableView: UITableView!
-    let tableViewData = Array(repeating: "Item", count: 10)
+    
+    
+    let mainarray = Array(repeating: "Item", count: 10)
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.tableViewData.count
+        return self.mainarray.count
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
-        cell.textLabel?.text = self.tableViewData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath)
+        cell.textLabel?.text = self.mainarray[indexPath.row]
         return cell
     }
     
