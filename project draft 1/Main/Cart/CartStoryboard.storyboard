@@ -78,6 +78,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dishimage" destination="wZe-KB-03W" id="Abc-8j-Y9g"/>
+                                            <outlet property="nametxt" destination="vFF-EG-vLk" id="Hov-CP-k14"/>
+                                            <outlet property="pricetxt" destination="2BZ-HV-7zY" id="hxf-PV-86g"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

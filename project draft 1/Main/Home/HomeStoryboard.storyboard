@@ -66,6 +66,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dishimage" destination="Gh2-gg-ghf" id="RyQ-lv-Q0F"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
