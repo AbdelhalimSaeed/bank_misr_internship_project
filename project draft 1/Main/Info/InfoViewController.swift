@@ -9,23 +9,40 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    @IBOutlet weak var lblOrder: UILabel!
-    @IBOutlet weak var lblVouchers: UILabel!
-    @IBOutlet weak var lblNotifications: UILabel!
-    @IBOutlet weak var lblHelp: UILabel!
+
     
+    @IBOutlet weak var orderlbl: UILabel!
+    
+    @IBOutlet weak var voucherlbl: UILabel!
+    
+    @IBOutlet weak var notificationlbl: UILabel!
+    
+    @IBOutlet weak var helplbl: UILabel!
+    
+    
+    @IBOutlet weak var logoutbtn: UIButton!
+    
+    
+    @IBOutlet weak var gobackbtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        lblOrder?.layer.cornerRadius = 20
-        lblVouchers?.layer.cornerRadius = 20
-        lblNotifications?.layer.cornerRadius = 20
-        lblHelp?.layer.cornerRadius = 20
-
+        orderlbl?.layer.cornerRadius = 20
+        voucherlbl?.layer.cornerRadius = 20
+        notificationlbl?.layer.cornerRadius = 20
+        helplbl?.layer.cornerRadius = 20
+        
+        
+        logoutbtn.layer.cornerRadius = 20
+        gobackbtn.layer.cornerRadius = 20
+        
     }
+    
+    
 
+    
 
 }
 

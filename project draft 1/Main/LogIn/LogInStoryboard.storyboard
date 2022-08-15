@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SignUpStoryboard-->
+        <scene sceneID="I36-nX-cyA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUpStoryboard" id="vwc-95-aqH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trR-Ty-eUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-398" y="-57"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="8tQ-cb-ldq">
             <objects>
@@ -51,6 +59,9 @@
                                 <state key="normal" title="Sign Up from Here">
                                     <color key="titleColor" name="red"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vwc-95-aqH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="X86-18-e33"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to The Community?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unV-w5-Ekf">
                                 <rect key="frame" x="113" y="695" width="188" height="21"/>
@@ -75,10 +86,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="loginBtn" destination="1sr-nN-PAp" id="j4W-SC-YGq"/>
-                        <outlet property="loginView" destination="NUF-7G-Ht8" id="e14-ra-Nqb"/>
-                        <outlet property="txtPassword" destination="RGG-zi-1yo" id="3Hw-0v-FfN"/>
-                        <outlet property="txtUsername" destination="IDW-UH-eej" id="8UA-8z-q8V"/>
+                        <outlet property="loginView" destination="NUF-7G-Ht8" id="cDk-HP-wZf"/>
+                        <outlet property="loginbtn" destination="1sr-nN-PAp" id="DeA-9u-TFI"/>
+                        <outlet property="passwordtxt" destination="RGG-zi-1yo" id="bXX-nk-UW4"/>
+                        <outlet property="usernametxt" destination="IDW-UH-eej" id="Ge1-bh-grb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLr-uP-upB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

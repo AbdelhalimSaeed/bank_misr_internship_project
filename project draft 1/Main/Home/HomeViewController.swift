@@ -29,5 +29,17 @@ class HomeViewController: UIViewController, UITableViewDataSource{
         cell.textLabel?.text = self.tableViewData[indexPath.row]
         return cell
     }
+    
+    
+    @IBAction func heartbtn(_ sender: UIButton) {
+        if sender.isSelected
+        {
+            sender.isSelected = false
+        }
+        else{
+            sender.isSelected = true
+        }
+    }
+    
 }
 

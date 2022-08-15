@@ -9,10 +9,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LogInStoryboard-->
+        <scene sceneID="NPm-3w-XIS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogInStoryboard" id="ZXE-FF-jam" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojm-rh-9B7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="46"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="4BZ-1V-Ima">
             <objects>
-                <viewController id="y5J-Lz-XZB" customClass="SignUpViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="y5J-Lz-XZB" customClass="SignUpViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUK-Ah-9hf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,11 +37,14 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzj-w7-ulv">
-                                <rect key="frame" x="148" y="749" width="120" height="30"/>
+                                <rect key="frame" x="151" y="749" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In from Here">
+                                <state key="normal" title="Log In from Here">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ZXE-FF-jam" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="F5y-PQ-l0U"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJc-uZ-K0A">
                                 <rect key="frame" x="33" y="258" width="354" height="52"/>
@@ -64,6 +75,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupbtn:" destination="y5J-Lz-XZB" eventType="touchUpInside" id="4Kq-hZ-X6n"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="uPD-OY-LBI">
                                 <rect key="frame" x="43" y="539" width="334" height="34"/>
@@ -86,6 +100,14 @@
                         <viewLayoutGuide key="safeArea" id="AK4-ER-uAh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmpasswordtxt" destination="uPD-OY-LBI" id="HVn-83-yhn"/>
+                        <outlet property="emailtxt" destination="r3h-k1-bX0" id="xQN-lu-rec"/>
+                        <outlet property="nametxt" destination="Nge-Jv-xUG" id="cz5-SY-gkI"/>
+                        <outlet property="passwordtxt" destination="NwI-jf-dEE" id="09u-re-BNn"/>
+                        <outlet property="signupbtn" destination="tRh-K9-QcD" id="fcf-LZ-Y2d"/>
+                        <outlet property="signupview" destination="6xA-W7-iWD" id="bwo-mH-2uJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zwc-iw-7ni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

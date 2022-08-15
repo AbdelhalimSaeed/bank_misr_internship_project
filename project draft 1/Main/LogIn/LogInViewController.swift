@@ -9,17 +9,17 @@ import UIKit
 import CoreData
 
 class LogInViewController: UIViewController, UITextViewDelegate {
-    @IBOutlet weak var txtUsername: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var usernametxt: UITextField!
+    @IBOutlet weak var passwordtxt: UITextField!
+    @IBOutlet weak var loginbtn: UIButton!
+    @IBOutlet weak var loginview: UIView!
     
     var result = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginBtn.layer.cornerRadius = 20
-        loginView.layer.cornerRadius = 20
+        loginbtn.layer.cornerRadius = 20
+        loginview.layer.cornerRadius = 20
         
     }
     
@@ -27,24 +27,16 @@ class LogInViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func remember(_ sender: UIButton) {
-        if sender.isSelected
-        {
-            sender.isSelected = false
-        }
-        else{
-            sender.isSelected = true
-        }
-    }
+
     
     @IBAction func loginButton(_ sender: Any) {
-        if txtUsername.text == "" || txtPassword.text == ""
+        if usernametxt.text == "" || passwordtxt.text == ""
             {
                 let alert = UIAlertController(title: "ERROR", message: "You must fillin all the fields", preferredStyle: .alert)
 
                 let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-                alert.view.tintColor = UIColor.orange
+                alert.view.tintColor = UIColor.red
                 alert.addAction(ok)
                 alert.addAction(cancel)
 
@@ -52,7 +44,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
             }
             else
             {
-                self.CheckForUserNameAndPasswordMatch(username : txtUsername.text! as String, password : txtPassword.text! as String)
+                self.CheckForUserNameAndPasswordMatch(username : usernametxt.text! as String, password : passwordtxt.text! as String)
             }
         }
         func CheckForUserNameAndPasswordMatch( username: String, password : String)
@@ -78,10 +70,10 @@ class LogInViewController: UIViewController, UITextViewDelegate {
                     
                     {
                         print("Login Succesfully")
-//                        let HomeVC = (storyboard?.instantiateViewController(withIdentifier: "TabVC"))! as UIViewController
-//                        present(HomeVC, animated: true, completion: nil)
-                        if let TabVC = (storyboard!.instantiateViewController(withIdentifier: "TabVC") as? UITabBarController) {
-                            self.present(TabVC, animated: true, completion: nil)
+
+                        
+                        if let HomeViewController = (storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as? UIViewController) {
+                            self.present(HomeViewController, animated: true, completion: nil)
                             //self.show(TabVC, sender: nil)
                             self.modalPresentationStyle = .fullScreen
                             self.modalTransitionStyle = .crossDissolve
@@ -98,7 +90,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
 
                         let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-                        alert.view.tintColor = UIColor.orange
+                        alert.view.tintColor = UIColor.red
                         alert.addAction(ok)
                         alert.addAction(cancel)
                         self.present(alert, animated: true, completion: nil)

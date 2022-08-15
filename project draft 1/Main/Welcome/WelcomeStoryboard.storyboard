@@ -8,26 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LogInViewController-->
+        <!--LogInStoryboard-->
         <scene sceneID="gST-PV-t5b">
             <objects>
-                <viewControllerPlaceholder storyboardName="LogInStoryboard" referencedIdentifier="LogInViewController" id="Hqz-UW-ahH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="LogInStoryboard" id="Hqz-UW-ahH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ayT-Ih-wZ5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXH-EA-Plf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="9"/>
+            <point key="canvasLocation" x="-427" y="-12"/>
+        </scene>
+        <!--SignUpStoryboard-->
+        <scene sceneID="cck-hi-KkN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUpStoryboard" id="WVQ-Mv-mjX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYJ-jQ-z8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="92"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="uxY-j3-OMh">
             <objects>
-                <viewController id="Iwf-gg-XSL" customClass="WelcomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="Iwf-gg-XSL" customClass="WelcomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyW-cm-B1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-cK-qHb">
-                                <rect key="frame" x="109" y="668" width="210" height="48"/>
+                                <rect key="frame" x="109" y="679" width="210" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -38,13 +46,6 @@
                                     <segue destination="Hqz-UW-ahH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UZs-Mc-46X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to the community?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmv-T7-6cj">
-                                <rect key="frame" x="142" y="738" width="144" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-1y-xUO">
                                 <rect key="frame" x="109" y="755" width="210" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,6 +54,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" name="red"/>
                                 </state>
+                                <connections>
+                                    <segue destination="WVQ-Mv-mjX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="XKq-CR-1q3"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KDK-p9-k2k">
                                 <rect key="frame" x="6" y="217" width="402" height="351"/>
@@ -78,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="loginbtn" destination="NX0-cK-qHb" id="vJb-RE-Oaz"/>
+                        <outlet property="signupbtn" destination="dCo-1y-xUO" id="0Yi-jR-waq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpq-ZN-QVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
