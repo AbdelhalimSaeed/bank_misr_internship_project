@@ -23,20 +23,30 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
         gobackbtn.layer.cornerRadius = 20
         paynowbtn.layer.cornerRadius = 20
+        
+        
+        carttabel.dataSource = self
+        carttabel.delegate = self
     }
     
     
+    let cartarray = Array(repeating: "Item", count: 10)
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return 7
-       }
-       
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let Cell = carttabel.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-           Cell.textLabel?.text = "Mario"
-           return Cell
-       }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return self.cartarray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cartcell", for: indexPath)
+        cell.textLabel?.text = self.cartarray[indexPath.row]
+        return cell
+    }
 
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
