@@ -9,14 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
-        <scene sceneID="r2M-rQ-hE5">
-            <objects>
-                <viewControllerPlaceholder id="f6l-RA-wqV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dm1-V2-Qyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="18"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="z70-M9-8Z1">
             <objects>
@@ -229,30 +221,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56Y-pN-mLa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795.6521739130435" y="49.553571428571423"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="o1d-XQ-Dtg">
-            <objects>
-                <viewControllerPlaceholder id="Uxx-fk-FNg" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VaM-CX-L3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="69"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="uZQ-Ui-a3I">
-            <objects>
-                <viewControllerPlaceholder id="ZzR-9x-QvY" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ak6-Cr-IUU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="135"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="MmD-fd-sze">
-            <objects>
-                <viewControllerPlaceholder id="dkH-Ny-qLN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DoX-cu-XQL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="187"/>
         </scene>
     </scenes>
     <resources>

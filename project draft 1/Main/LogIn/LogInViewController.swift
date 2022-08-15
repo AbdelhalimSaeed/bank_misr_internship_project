@@ -11,14 +11,14 @@ import CoreData
 class LogInViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var loginView: UIView!
     
     var result = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.cornerRadius = 20
+        loginBtn.layer.cornerRadius = 20
         loginView.layer.cornerRadius = 20
         
     }

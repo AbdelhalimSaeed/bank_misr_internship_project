@@ -112,38 +112,6 @@
             </objects>
             <point key="canvasLocation" x="211.59420289855075" y="42.857142857142854"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="X4J-ku-9qk">
-            <objects>
-                <viewControllerPlaceholder id="6uu-jt-ahH" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="St0-5f-WQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="18"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="IdO-Of-mOZ">
-            <objects>
-                <viewControllerPlaceholder id="1yY-x8-EcE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14c-n1-Nbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="69"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="2w8-aa-pYU">
-            <objects>
-                <viewControllerPlaceholder id="3Ds-nH-0Uq" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DCN-aG-uSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="135"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="gzb-DU-SRC">
-            <objects>
-                <viewControllerPlaceholder id="Myw-z6-Oq6" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rRq-2u-9BZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="187"/>
-        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>

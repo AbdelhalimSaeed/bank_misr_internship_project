@@ -68,38 +68,6 @@
             </objects>
             <point key="canvasLocation" x="166.66666666666669" y="92.410714285714278"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="tUE-bS-OsW">
-            <objects>
-                <viewControllerPlaceholder id="7XB-vy-MZg" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Icz-z0-UIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="18"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="mwb-7o-ADx">
-            <objects>
-                <viewControllerPlaceholder id="oOx-az-kJI" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="49z-Ul-xCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="69"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="U88-Ed-DhV">
-            <objects>
-                <viewControllerPlaceholder id="4o2-HJ-X5O" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R5Q-tw-ep8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="135"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="d4O-nd-eEZ">
-            <objects>
-                <viewControllerPlaceholder id="hLK-Hq-L1r" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wrT-gA-DJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="187"/>
-        </scene>
     </scenes>
     <resources>
         <image name="logo" width="1333.3333740234375" height="1333.3333740234375"/>

@@ -74,42 +74,16 @@
                         <viewLayoutGuide key="safeArea" id="bdT-XE-SnL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="1sr-nN-PAp" id="j4W-SC-YGq"/>
+                        <outlet property="loginView" destination="NUF-7G-Ht8" id="e14-ra-Nqb"/>
+                        <outlet property="txtPassword" destination="RGG-zi-1yo" id="3Hw-0v-FfN"/>
+                        <outlet property="txtUsername" destination="IDW-UH-eej" id="8UA-8z-q8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLr-uP-upB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434.78260869565219" y="57.589285714285708"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="gzD-AM-ffP">
-            <objects>
-                <viewControllerPlaceholder id="EwW-an-Ofx" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KDT-ik-Ibc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="18"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="lu7-5B-Yq2">
-            <objects>
-                <viewControllerPlaceholder id="dYQ-ze-Yc2" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Scr-lr-9Lt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="69"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="Viq-dG-XGS">
-            <objects>
-                <viewControllerPlaceholder id="rna-ip-Vem" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dMD-4g-SWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="135"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="FWB-oT-P5o">
-            <objects>
-                <viewControllerPlaceholder id="VEE-70-ElB" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tS9-At-zfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="187"/>
         </scene>
     </scenes>
     <resources>
