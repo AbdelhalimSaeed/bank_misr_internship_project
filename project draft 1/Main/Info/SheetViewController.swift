@@ -12,34 +12,36 @@ class SheetViewController: UIViewController {
     @IBOutlet weak var itemimg: UIImageView!
     
     @IBOutlet weak var nametxt: UILabel!
-    
     @IBOutlet weak var pricetxt: UILabel!
-    
-    @IBOutlet weak var stepper: UIStepper!
-    
     @IBOutlet weak var steppervalue: UILabel!
-    
     @IBOutlet weak var sheetview: UIView!
-        
-    
     @IBOutlet weak var addcartbtn: UIButton!
-    
     @IBOutlet weak var continuebtn: UIButton!
-    
     @IBOutlet weak var cancelbtn: UIButton!
     
     
     
+    @IBAction func stepper(_ sender: UIStepper) {
+        steppervalue.text = String(sender .value)
+    }
+    
+    
+    @IBAction func cancelbtn(_ sender: UIButton){
+        sender.isSelected  = !sender.isSelected
+        if (sender.isSelected)
+        {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         sheetview.layer.cornerRadius = 20
+        
+        
 
-        // Do any additional setup after loading the view.
-    }
+        }
     
 
     /*

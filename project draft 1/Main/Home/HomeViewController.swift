@@ -22,17 +22,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
    
     
     @IBOutlet weak var maintabel: UITableView!
-
     @IBOutlet weak var img: UIImageView!
-    
     @IBOutlet weak var nametxt: UILabel!
-    
     @IBOutlet weak var pricetxt: UILabel!
-    
     @IBOutlet weak var descriptiontxt: UILabel!
- 
-    
     @IBOutlet weak var gotocartbtn: UIButton!
+    
+    
+    @IBAction func addtocart(_ sender: UIButton) {
+        sender.isSelected  = !sender.isSelected
+        
+        if (sender.isSelected)
+        {
+            let sheetvc = self.storyboard?.instantiateViewController(identifier: "SheetViewController") as! SheetViewController
+            
+            sheetvc.itemimg.image = img.image
+            sheetvc.nametxt.text = nametxt.text
+            sheetvc.pricetxt.text = String(Int(pricetxt.text) * Int(sheetvc.steppervalue.text))
+            
+            self.navigationController?.pushViewController(sheetvc, animated: true)
+
+        }
+        
+    }
+    
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -48,6 +62,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //fetchProduct()
         productsExists()
+        
+        
+        
         
     }
     
@@ -127,10 +144,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     
     
-//    img: UIImageVi
-//    nametxt: UILab
-//    pricetxt: UIBu
-//    descriptiontxt
+
     
     
     @IBAction func heartbtn(_ sender: UIButton) {

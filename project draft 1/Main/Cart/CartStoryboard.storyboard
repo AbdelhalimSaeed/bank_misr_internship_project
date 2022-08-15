@@ -73,7 +73,7 @@
                                                     <rect key="frame" x="166" y="76" width="51" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="red"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
