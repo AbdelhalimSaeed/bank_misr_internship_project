@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 {
     
     
-    var result = NSArray()
+    //var result = NSArray()
     
     var items: [ProductInfo] = []
    
@@ -76,8 +76,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 
                 
-                result = try  context.fetch(fetchrequest) as NSArray
-                if(result.count == 0)
+                items = try  context.fetch(fetchrequest) as! [ProductInfo]
+                if(items.count == 0)
                 {
                     let alert = UIAlertController(title: "ERROR", message: "No items avilable", preferredStyle: .alert)
 
@@ -103,11 +103,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath)
+        let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! HomeTableViewCell
         let product = self.items[indexPath.row]
-        cell.textLabel?.text = product.image
+        //cell.textLabel?.text = product.image
+        
+        // we need to convert the string to an image
+        
+        //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
+        
+        cell.setupCell(img: UIImage.init(named: "\(String(describing: img))")!)
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let image = items.[indexPath.row]
+            imageView.image = UIImage.init(named: "ImageName")
+        }
     
     
     @IBAction func heartbtn(_ sender: UIButton) {
