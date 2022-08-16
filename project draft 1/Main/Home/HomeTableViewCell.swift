@@ -14,7 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     
     
     
-    @IBOutlet weak var dishimage: UIImageView!
+    @IBOutlet weak var imagee: UIImageView!
     
     
     override func awakeFromNib() {
@@ -29,7 +29,7 @@ class HomeTableViewCell: UITableViewCell {
     
     func setupCell( img: UIImage)
     {
-        dishimage.image = img
+        imagee.image = img
 
     }
 

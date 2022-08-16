@@ -9,25 +9,32 @@
 import Foundation
 import UIKit
 import CoreData
+
 //var products:[ProductInfo] = []
+var n: [String?] = []
+var p: [Double] = []
+var i: [String?] = []
+var d: [String?] = []
+var items: [ProductInfo] = []
+var product: ProductInfo?
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate
 {
-    
+
     
     //var result = NSArray()
     
-    var items: [ProductInfo] = []
-   
     
     @IBOutlet weak var maintabel: UITableView!
+    
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var nametxt: UILabel!
     @IBOutlet weak var pricetxt: UILabel!
     @IBOutlet weak var descriptiontxt: UILabel!
     @IBOutlet weak var gotocartbtn: UIButton!
     
+    @IBOutlet weak var imagee: UIImageView!
     
     @IBAction func addtocart(_ sender: UIButton) {
         sender.isSelected  = !sender.isSelected
@@ -36,11 +43,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             let sheetvc = self.storyboard?.instantiateViewController(identifier: "SheetViewController") as! SheetViewController
             
-            sheetvc.itemimg.image = img.image
-            sheetvc.nametxt.text = nametxt.text
-            sheetvc.pricetxt.text = String(Int(pricetxt.text) * Int(sheetvc.steppervalue.text))
+           // sheetvc.itemimg.image = img.image
+           // sheetvc.nametxt.text = nametxt.text
+            /*sheetvc.pricetxt.text = String(Int(pricetxt.text) * Int(sheetvc.steppervalue.text))
             
-            self.navigationController?.pushViewController(sheetvc, animated: true)
+            self.navigationController?.pushViewController(sheetvc, animated: true)*/
 
         }
         
@@ -48,10 +55,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
+    
     override func viewDidLoad(){
         super.viewDidLoad()
-        
-        
+        if(!productsExists()){
+            addItems()
+        }
+        print(items.count)
+        fetchProduct()
+        print(items.count)
+        n = [items[0].name,items[1].name,items[2].name,items[3].name,items[4].name,items[5].name,items[6].name,items[7].name]
+        p = [items[0].price,items[1].price,items[2].price,items[3].price,items[4].price,items[5].price,items[6].price,items[7].price]
+        i = [items[0].image,items[1].image,items[2].image,items[3].image,items[4].image,items[5].image,items[6].image,items[7].image]
+        d = [items[0].desc,items[1].desc,items[2].desc,items[3].desc,items[4].desc,items[5].desc,items[6].desc,items[7].desc]
         maintabel.register(UITableViewCell.self, forCellReuseIdentifier: "maincell")
         
         gotocartbtn.layer.cornerRadius = 35
@@ -59,9 +75,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         maintabel.dataSource = self
         maintabel.delegate = self
-        
-        //fetchProduct()
-        productsExists()
         
         
         
@@ -72,7 +85,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func fetchProduct(){
         do{
-            self.items = try context.fetch(ProductInfo.fetchRequest())
+            items = try context.fetch(ProductInfo.fetchRequest())
             DispatchQueue.main.async{
                 self.maintabel.reloadData()
             }
@@ -80,9 +93,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         catch{
             
         }
+        print("items count")
+        print(items.count)
      }
     
-    func productsExists()
+    /*func productsExists()
         {
             do
             {   let app = UIApplication.shared.delegate as! AppDelegate
@@ -111,7 +126,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch  {  }
 
         }
-
+*/
+    
+    func productsExists() -> Bool{
+        do{
+            items = try context.fetch(ProductInfo.fetchRequest())
+            if(items.count==0){
+                return false
+                
+            }
+            else{
+                return true
+            }
+            
+            
+        } catch{}
+        return false
+        
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -121,13 +153,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! HomeTableViewCell
-        let product = self.items[indexPath.row]
-        //cell.textLabel?.text = product.image
-        // we need to convert the string to an image
         
+        cell.imagee.image = UIImage(contentsOfFile: i[indexPath.row]!)      // we need to convert the string to an image
         //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
-
-        cell.setupCell(img: UIImage.init(named: "\(String(describing: img))")!)
+      
+        
         return cell
     }
     
@@ -136,13 +166,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             //let image = tableViewData[indexPath.row]
             //imageView.image = UIImage.init(named: "ImageName")
         
-        let tableinfo = self.items[indexPath.row]
+        let tableinfo = items[indexPath.row]
         img.image = UIImage.init(named: "\(String(describing: tableinfo.image))")
         nametxt.text = tableinfo.name
         pricetxt.text = String("\(tableinfo.price)")
         descriptiontxt.text = tableinfo.desc
         }
-    
     
 
     

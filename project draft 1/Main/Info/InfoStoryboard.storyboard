@@ -28,7 +28,7 @@
         <!--Info-->
         <scene sceneID="GXX-lt-oYl">
             <objects>
-                <viewController storyboardIdentifier="InfoViewController" id="IOn-jP-8dj" customClass="InfoViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" modalPresentationStyle="fullScreen" id="IOn-jP-8dj" customClass="InfoViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HLC-yP-ihk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

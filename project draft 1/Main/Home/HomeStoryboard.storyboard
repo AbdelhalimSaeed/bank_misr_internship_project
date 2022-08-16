@@ -32,7 +32,7 @@
         <!--Home View Controller-->
         <scene sceneID="z70-M9-8Z1">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="EaQ-rQ-6Qc" customClass="HomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="EaQ-rQ-6Qc" customClass="HomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYn-95-3Ew">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IF9-NL-ePg">
-                                <rect key="frame" x="0.0" y="153" width="169" height="743"/>
+                                <rect key="frame" x="0.0" y="157" width="169" height="743"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -66,9 +66,6 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="dishimage" destination="Gh2-gg-ghf" id="RyQ-lv-Q0F"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -172,7 +169,7 @@
                     <connections>
                         <outlet property="descriptiontxt" destination="5f4-eN-Zdr" id="mDq-ae-m7I"/>
                         <outlet property="gotocartbtn" destination="oQv-nf-URS" id="9tH-Uc-5kq"/>
-                        <outlet property="img" destination="b6T-eB-lDc" id="Zco-XO-c5q"/>
+                        <outlet property="img" destination="b6T-eB-lDc" id="m27-nU-25f"/>
                         <outlet property="maintabel" destination="IF9-NL-ePg" id="XEK-dc-Sis"/>
                         <outlet property="nametxt" destination="bWb-fJ-ILI" id="rHa-lf-xmv"/>
                         <outlet property="pricetxt" destination="pdE-9U-gD1" id="SpI-Ix-fzv"/>

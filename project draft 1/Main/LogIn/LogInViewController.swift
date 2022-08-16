@@ -28,7 +28,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
     }
 
 
-    
+    let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
     @IBAction func loginButton(_ sender: Any) {
         if usernametxt.text == "" || passwordtxt.text == ""
             {
@@ -70,10 +70,11 @@ class LogInViewController: UIViewController, UITextViewDelegate {
                     
                     {
                         print("Login Succesfully")
-
                         
-                        if let HomeViewController = (storyboard!.instantiateViewController(withIdentifier: "HomeViewController") as? UIViewController) {
-                            self.present(HomeViewController, animated: true, completion: nil)
+                        if let HomeViewController = (story.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController) {
+                            let details = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier:"HomeViewController" ) as! HomeViewController
+                               
+                            self.present(details, animated: true, completion: nil)
                             //self.show(TabVC, sender: nil)
                             self.modalPresentationStyle = .fullScreen
                             self.modalTransitionStyle = .crossDissolve
