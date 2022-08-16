@@ -35,6 +35,31 @@ class SheetViewController: UIViewController {
     }
     
     
+    
+    @IBAction func continuebtn(_ sender: UIButton){
+        sender.isSelected  = !sender.isSelected
+        if (sender.isSelected)
+        {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    @IBAction func addcartbtn(_ sender: UIButton){
+        sender.isSelected  = !sender.isSelected
+        if (sender.isSelected)
+        {
+            let cartvc = self.storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+            
+// here we pass information form action sheet to cart which is in another storyboard if the button is pressed
+            
+            self.navigationController?.pushViewController(cartvc, animated: true)
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sheetview.layer.cornerRadius = 20
