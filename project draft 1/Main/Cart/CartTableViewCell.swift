@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+func updateCart(){
+    
+}
 class CartTableViewCell: UITableViewCell {
 
     
@@ -22,6 +24,10 @@ class CartTableViewCell: UITableViewCell {
     }
     
     
+    @IBAction func cancelOrder(_ sender: UIButton) {
+        selected!.boughtItemsCount=0
+        selected!.isAddedToCart=false
+    }
     
     func setupCell( img: UIImage, nm: String, pr: String)
     {

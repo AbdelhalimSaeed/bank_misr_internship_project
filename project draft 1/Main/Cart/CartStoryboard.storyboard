@@ -59,23 +59,39 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZe-KB-03W">
-                                                    <rect key="frame" x="0.0" y="11" width="148" height="93"/>
+                                                    <rect key="frame" x="30" y="11" width="148" height="93"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFF-EG-vLk">
-                                                    <rect key="frame" x="166" y="20" width="102" height="48"/>
+                                                    <rect key="frame" x="188" y="20" width="102" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BZ-HV-7zY">
-                                                    <rect key="frame" x="166" y="76" width="51" height="28"/>
+                                                    <rect key="frame" x="203" y="76" width="51" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="textColor" name="red"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4v-MP-qC3">
+                                                    <rect key="frame" x="188" y="69" width="21" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <color key="textColor" name="red"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-OO-BhU">
+                                                    <rect key="frame" x="2" y="2" width="21" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" name="red"/>
+                                                    <state key="normal" image="xmark.octagon.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="cancelOrder:" destination="ZYh-t0-wgf" eventType="touchUpInside" id="saq-d1-CKY"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -98,9 +114,12 @@
                                 <state key="normal" title="Pay Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="gotoWelcome:" destination="LC8-9n-Ydc" eventType="touchUpInside" id="uE5-6L-7Mg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGJ-TK-FgW">
-                                <rect key="frame" x="20" y="93" width="374" height="43"/>
+                                <rect key="frame" x="10" y="93" width="374" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="red"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -108,7 +127,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iiG-wF-tSN" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="f77-Ix-e3l"/>
+                                    <action selector="goBack:" destination="LC8-9n-Ydc" eventType="touchUpInside" id="3WP-R6-quZ"/>
+                                    <segue destination="iiG-wF-tSN" kind="presentation" identifier="HomeStoryboard" customClass="HomeViewController" customModule="project_draft_1" customModuleProvider="target" id="5XR-wH-Amj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,11 +142,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axs-MQ-tU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZYh-t0-wgf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="211.59420289855075" y="42.857142857142854"/>
         </scene>
     </scenes>
     <resources>
+        <image name="xmark.octagon.fill" catalog="system" width="128" height="112"/>
         <namedColor name="red">
             <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

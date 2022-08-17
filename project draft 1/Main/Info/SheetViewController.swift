@@ -22,16 +22,16 @@ class SheetViewController: UIViewController {
     
     
     @IBAction func stepper(_ sender: UIStepper) {
-        steppervalue.text = String(sender .value)
+        selected!.boughtItemsCount=Int64(sender.value)
+        steppervalue.text = String(Int64(sender .value))
+        pricetxt.text=String(selected!.price*sender.value)
     }
     
     
     @IBAction func cancelbtn(_ sender: UIButton){
-        sender.isSelected  = !sender.isSelected
-        if (sender.isSelected)
-        {
-            self.navigationController?.dismiss(animated: true, completion: nil)
-        }
+        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+            let home = story.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+              self.present(home, animated: true, completion: nil)
     }
     
     
@@ -47,16 +47,20 @@ class SheetViewController: UIViewController {
     
     
     @IBAction func addcartbtn(_ sender: UIButton){
-        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
-        sender.isSelected  = !sender.isSelected
-        if (sender.isSelected)
-        {
-            let cartvc = story.instantiateViewController(identifier: "CartViewController") as! CartViewController
-            
-// here we pass information form action sheet to cart which is in another storyboard if the button is pressed
-            
-            self.present(cartvc, animated: true, completion: nil)
+        if let cartdetails=cart{
+            if(!cart!.contains(selected!)){
+               cart?.append(selected!)
+               selected!.isAddedToCart=true
         }
+        }else{
+               cart?.append(selected!)
+               selected!.isAddedToCart=true
+        
+        }
+        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+            let home = story.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+              self.present(home, animated: true, completion: nil)
+        
     }
     
     

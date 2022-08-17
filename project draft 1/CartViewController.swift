@@ -15,6 +15,29 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var carttabel: UITableView!
     
     
+    @IBAction func gotoWelcome(_ sender: UIButton) {
+        items[0].boughtItemsCount=0
+        items[1].boughtItemsCount=0
+        items[2].boughtItemsCount=0
+        items[3].boughtItemsCount=0
+        items[4].boughtItemsCount=0
+        items[5].boughtItemsCount=0
+        items[6].boughtItemsCount=0
+        items[7].boughtItemsCount=0
+        items[0].isAddedToCart=false
+        items[1].isAddedToCart=false
+        items[2].isAddedToCart=false
+        items[3].isAddedToCart=false
+        items[4].isAddedToCart=false
+        items[5].isAddedToCart=false
+        items[6].isAddedToCart=false
+        items[7].isAddedToCart=false
+        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        if let home = (story.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController) {
+         
+             self.present(home, animated: true, completion: nil)
+    }
+    }
     
     
     
@@ -24,25 +47,24 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         gobackbtn.layer.cornerRadius = 20
         paynowbtn.layer.cornerRadius = 20
         
-        
+        carttabel.register(UITableViewCell.self, forCellReuseIdentifier: "cartcell")
         carttabel.dataSource = self
         carttabel.delegate = self
     }
     
     
-    let cartarray = Array(repeating: "Item", count: 10)
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.cartarray.count
+        return cart!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cartcell", for: indexPath)
-        cell.textLabel?.text = self.cartarray[indexPath.row]
+        let cell = carttabel.dequeueReusableCell(withIdentifier: "cartcell", for: indexPath) as! UITableViewCell
+        
         return cell
     }
 
+    
     
     
     

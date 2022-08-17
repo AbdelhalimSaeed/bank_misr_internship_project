@@ -15,6 +15,8 @@ var p: [Double] = []
 var i: [String?] = []
 var d: [String?] = []
 var items: [ProductInfo] = []
+var cart: [ProductInfo]?
+var selected: ProductInfo?
 
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -26,17 +28,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var viewInfo: UIButton!
     
-    @IBAction func gotocart(_ sender: UIButton) {
-        let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
-            let cartvc = story.instantiateViewController(identifier: "CartViewController") as! CartViewController
-              self.present(cartvc, animated: true, completion: nil)
-    }
+   
     
-    @IBAction func gotoCart(_ sender: UIButton) {
-        let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
-            let cartvc = story.instantiateViewController(identifier: "CartViewController") as! CartViewController
-              self.present(cartvc, animated: true, completion: nil)
-    }
     
     @IBOutlet weak var maintabel: UITableView!
     
@@ -57,10 +50,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
               self.present(sheetvc, animated: true, completion: nil)
             
             sheetvc.nametxt.text = nametxt.text
-            /*sheetvc.pricetxt.text = String(Int(pricetxt.text) * Int(sheetvc.steppervalue.text))
+            sheetvc.pricetxt.text=pricetxt.text
             
-            self.navigationController?.pushViewController(sheetvc, animated: true)*/
-
+            //self.navigationController?.pushViewController(sheetvc, animated: true)
         }
         
     }
@@ -73,6 +65,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(!productsExists()){
             addItems()
         }
+        selected=items[0]
         print(items.count)
         fetchProduct()
         print(items.count)
@@ -150,7 +143,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             //let image = tableViewData[indexPath.row]
             //imageView.image = UIImage.init(named: "ImageName")
-        
+        selected=items[indexPath.row]
         let tableinfo = items[indexPath.row]
         img.image = UIImage.init(named: "\(String(describing: tableinfo.image))")
         nametxt.text = tableinfo.name
