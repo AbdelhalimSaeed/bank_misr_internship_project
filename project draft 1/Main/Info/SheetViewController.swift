@@ -47,14 +47,15 @@ class SheetViewController: UIViewController {
     
     
     @IBAction func addcartbtn(_ sender: UIButton){
+        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         sender.isSelected  = !sender.isSelected
         if (sender.isSelected)
         {
-            let cartvc = self.storyboard?.instantiateViewController(identifier: "CartViewController") as! CartViewController
+            let cartvc = story.instantiateViewController(identifier: "CartViewController") as! CartViewController
             
 // here we pass information form action sheet to cart which is in another storyboard if the button is pressed
             
-            self.navigationController?.pushViewController(cartvc, animated: true)
+            self.present(cartvc, animated: true, completion: nil)
         }
     }
     

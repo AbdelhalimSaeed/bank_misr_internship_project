@@ -97,8 +97,8 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
 
        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
        if let HomeViewController = (story.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController) {
-        let details = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier:"HomeViewController" ) as! HomeViewController
-            self.present(details, animated: true, completion: nil)
+       
+            self.present(HomeViewController, animated: true, completion: nil)
           //self.show(TabVC, sender: nil)
             self.modalPresentationStyle = .fullScreen
             self.modalTransitionStyle = .crossDissolve

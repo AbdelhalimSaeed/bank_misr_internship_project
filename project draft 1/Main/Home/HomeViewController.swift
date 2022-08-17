@@ -10,13 +10,12 @@ import Foundation
 import UIKit
 import CoreData
 
-//var products:[ProductInfo] = []
 var n: [String?] = []
 var p: [Double] = []
 var i: [String?] = []
 var d: [String?] = []
 var items: [ProductInfo] = []
-var product: ProductInfo?
+
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate
@@ -25,6 +24,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //var result = NSArray()
     
+    @IBOutlet weak var viewInfo: UIButton!
+    
+    @IBAction func gotocart(_ sender: UIButton) {
+        let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
+            let cartvc = story.instantiateViewController(identifier: "CartViewController") as! CartViewController
+              self.present(cartvc, animated: true, completion: nil)
+    }
+    
+    @IBAction func gotoCart(_ sender: UIButton) {
+        let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
+            let cartvc = story.instantiateViewController(identifier: "CartViewController") as! CartViewController
+              self.present(cartvc, animated: true, completion: nil)
+    }
     
     @IBOutlet weak var maintabel: UITableView!
     
@@ -35,16 +47,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var gotocartbtn: UIButton!
     
     @IBOutlet weak var imagee: UIImageView!
-    
+   
     @IBAction func addtocart(_ sender: UIButton) {
         sender.isSelected  = !sender.isSelected
-        
+        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         if (sender.isSelected)
         {
-            let sheetvc = self.storyboard?.instantiateViewController(identifier: "SheetViewController") as! SheetViewController
+            let sheetvc = story.instantiateViewController(identifier: "SheetViewController") as! SheetViewController
+              self.present(sheetvc, animated: true, completion: nil)
             
-           // sheetvc.itemimg.image = img.image
-           // sheetvc.nametxt.text = nametxt.text
+            sheetvc.nametxt.text = nametxt.text
             /*sheetvc.pricetxt.text = String(Int(pricetxt.text) * Int(sheetvc.steppervalue.text))
             
             self.navigationController?.pushViewController(sheetvc, animated: true)*/
@@ -75,6 +87,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         maintabel.dataSource = self
         maintabel.delegate = self
+        img.image=UIImage(named:i[0]!)
+        nametxt.text=n[0]!
+        pricetxt.text=String(p[0])
+        descriptiontxt.text=d[0]!
         
         
         
@@ -96,37 +112,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("items count")
         print(items.count)
      }
-    
-    /*func productsExists()
-        {
-            do
-            {   let app = UIApplication.shared.delegate as! AppDelegate
-                
-                let context = app.persistentContainer.viewContext
-
-                let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductInfo")
-                
-                
-                
-                items = try  context.fetch(fetchrequest) as! [ProductInfo]
-                if(items.count == 0)
-                {
-                    let alert = UIAlertController(title: "ERROR", message: "No items avilable", preferredStyle: .alert)
-
-                    let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
-                    let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-                    alert.view.tintColor = UIColor.red
-                    alert.addAction(ok)
-                    alert.addAction(cancel)
-
-                    self.present(alert, animated: true, completion: nil)                }
-                else{
-                    fetchProduct()
-                }
-        } catch  {  }
-
-        }
-*/
     
     func productsExists() -> Bool{
         do{
@@ -152,12 +137,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! HomeTableViewCell
+        let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! UITableViewCell
         
-        cell.imagee.image = UIImage(contentsOfFile: i[indexPath.row]!)      // we need to convert the string to an image
+        //cell.imagee.image = UIImage(named: i[indexPath.row]!)      // we need to convert the string to an image
         //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
-      
-        
+        /*cell.imageView = UIImageView(named: i[indexPath.row])*/
+
         return cell
     }
     
@@ -174,6 +159,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     
 
+    @IBAction func infoView(_ sender: UIButton) {
+        let story = UIStoryboard(name: "InfoStoryboard", bundle: nil)
+        if let infos = (story.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController) {
+         
+             self.present(infos, animated: true, completion: nil)
+    }
+    }
     
     
     @IBAction func heartbtn(_ sender: UIButton) {

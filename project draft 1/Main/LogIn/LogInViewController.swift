@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-
+var user: UserInfo?
 class LogInViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var usernametxt: UITextField!
     @IBOutlet weak var passwordtxt: UITextField!
@@ -69,12 +69,12 @@ class LogInViewController: UIViewController, UITextViewDelegate {
                     if objectentity.username == username && objectentity.password == password
                     
                     {
+                        user=objectentity
                         print("Login Succesfully")
                         
                         if let HomeViewController = (story.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController) {
-                            let details = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier:"HomeViewController" ) as! HomeViewController
                                
-                            self.present(details, animated: true, completion: nil)
+                            self.present(HomeViewController, animated: true, completion: nil)
                             //self.show(TabVC, sender: nil)
                             self.modalPresentationStyle = .fullScreen
                             self.modalTransitionStyle = .crossDissolve
