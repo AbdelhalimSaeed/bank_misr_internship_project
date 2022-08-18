@@ -38,14 +38,14 @@ class InfoViewController: UIViewController {
     
     
     @IBAction func logOUT(_ sender: UIButton) {
-        items[0].boughtItemsCount=0
-        items[1].boughtItemsCount=0
-        items[2].boughtItemsCount=0
-        items[3].boughtItemsCount=0
-        items[4].boughtItemsCount=0
-        items[5].boughtItemsCount=0
-        items[6].boughtItemsCount=0
-        items[7].boughtItemsCount=0
+        items[0].boughtItemsCount=1
+        items[1].boughtItemsCount=1
+        items[2].boughtItemsCount=1
+        items[3].boughtItemsCount=1
+        items[4].boughtItemsCount=1
+        items[5].boughtItemsCount=1
+        items[6].boughtItemsCount=1
+        items[7].boughtItemsCount=1
         items[0].isAddedToCart=false
         items[1].isAddedToCart=false
         items[2].isAddedToCart=false
