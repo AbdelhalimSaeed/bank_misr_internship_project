@@ -244,7 +244,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-Mb-dx9">
-                                        <rect key="frame" x="369" y="12" width="37" height="33"/>
+                                        <rect key="frame" x="351" y="12" width="37" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" name="red"/>
                                         <state key="normal" image="xmark.octagon.fill" catalog="system">

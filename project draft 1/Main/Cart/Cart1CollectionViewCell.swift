@@ -20,7 +20,7 @@ class Cart1CollectionViewCell: UICollectionViewCell {
          while i<c{
              if(selected!.name!==cart[i].name!){
                  selected!.isAddedToCart=false
-                 selected!.boughtItemsCount=0
+                 selected!.boughtItemsCount=1
                  cart.remove(at: i)
              }
          }
