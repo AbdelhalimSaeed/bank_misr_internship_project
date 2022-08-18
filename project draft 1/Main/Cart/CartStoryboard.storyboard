@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lvF-qz-X5f" userLabel="carttabel">
-                                <rect key="frame" x="33" y="164" width="355" height="128"/>
+                                <rect key="frame" x="33" y="164" width="355" height="517"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wDj-d3-JQG">
@@ -74,7 +74,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cartcell" id="zTG-2a-SB0" userLabel="cartcell" customClass="CartCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cartcell" id="zTG-2a-SB0" userLabel="cartcell" customClass="Cart1CollectionViewCell" customModule="project_draft_1" customModuleProvider="target">
                                         <rect key="frame" x="2.5" y="0.0" width="350" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="utt-QC-u00">
@@ -87,7 +87,7 @@
                                                     <color key="tintColor" name="red"/>
                                                     <state key="normal" image="xmark.circle.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="cancelbtn:" destination="zTG-2a-SB0" eventType="touchUpInside" id="YbV-d1-FZZ"/>
+                                                        <action selector="cancelbtn:" destination="zTG-2a-SB0" eventType="touchUpInside" id="B25-qc-HR4"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hc2-7T-Oz9">
@@ -119,8 +119,9 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="350" height="128"/>
                                         <connections>
-                                            <outlet property="nametxt" destination="wy8-lo-LUv" id="ccx-7r-drG"/>
-                                            <outlet property="pricetxt" destination="Ufe-QG-oG4" id="vzD-Me-sFj"/>
+                                            <outlet property="imageV" destination="hc2-7T-Oz9" id="Z0z-4S-qrM"/>
+                                            <outlet property="nametxt" destination="wy8-lo-LUv" id="3Dn-L5-M8r"/>
+                                            <outlet property="pricetxt" destination="Ufe-QG-oG4" id="TXM-7F-XP8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -129,6 +130,13 @@
                                     <outlet property="delegate" destination="LC8-9n-Ydc" id="lZ4-Vo-QIL"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKJ-6m-cut">
+                                <rect key="frame" x="276" y="741" width="16" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" name="red"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yup-TT-PUi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,6 +145,7 @@
                         <outlet property="carttabel" destination="lvF-qz-X5f" id="2f1-x8-sr6"/>
                         <outlet property="gobackbtn" destination="JGJ-TK-FgW" id="6FJ-nl-0CR"/>
                         <outlet property="paynowbtn" destination="q6L-yF-rGm" id="4b0-Vq-6sI"/>
+                        <outlet property="totalprice" destination="9wv-hH-qgj" id="9Za-fQ-Pls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axs-MQ-tU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

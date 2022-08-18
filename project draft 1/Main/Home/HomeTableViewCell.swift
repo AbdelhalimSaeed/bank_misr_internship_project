@@ -2,7 +2,7 @@
 //  HomeTableViewCell.swift
 //  project draft 1
 //
-//  Created by Mayar Adel on 8/15/22.
+//  Created by Mayar Adel on 8/17/22.
 //
 
 import UIKit
@@ -10,29 +10,12 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
 
     
-    
-    
-    
-    
-    
-    @IBOutlet weak var imagee: UIImageView!
+   // @IBOutlet weak var imagee: UIImageView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    
-  //  @IBOutlet weak var imgs: UIImageView!
-    
-    
-    
-    
-    func setupCell( img: UIImage)
-    {
-   //    imgs.image = img
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

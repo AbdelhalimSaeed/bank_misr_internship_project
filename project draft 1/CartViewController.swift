@@ -9,7 +9,9 @@ import UIKit
 
 class CartViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 
- //   @IBOutlet weak var cartcell: CartCollectionViewCell!
+
+    @IBOutlet weak var totalprice: UILabel!
+    //  @IBOutlet weak var cartcell: Cart1CollectionViewCell!
     
     @IBOutlet weak var carttabel: UICollectionView!
     @IBOutlet weak var gobackbtn: UIButton!
@@ -72,7 +74,7 @@ class CartViewController: UIViewController,UICollectionViewDelegate, UICollectio
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartcell", for: indexPath) as! CartCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartcell", for: indexPath) as! Cart1CollectionViewCell
             
             cell.setUpCell(im: UIImage(imageLiteralResourceName: cart[indexPath.row].image!), nm: cart[indexPath.row].name!, pr: cart[indexPath.row].price)
             
