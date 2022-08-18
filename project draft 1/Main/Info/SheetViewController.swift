@@ -54,7 +54,7 @@ class SheetViewController: UIViewController {
                selected!.isAddedToCart=true
         }
             else{
-                var i=0
+                let i=0
                 while i<8{
                     if(cart[i].name!==selected!.name!){
                         cart[i].price=selected!.price

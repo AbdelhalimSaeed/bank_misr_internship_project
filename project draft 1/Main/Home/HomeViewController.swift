@@ -133,8 +133,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cartvc.totalprice.text=String(0)
             }
             else{
-                var i=0
-                var c=cart.count
+                let i=0
+                let c=cart.count
                 var t=0.0
                 while i<c{
                     t+=cart[i].price
@@ -152,8 +152,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cartvc.totalprice.text=String(0)
             }
             else{
-                var i=0
-                var c=cart.count
+                let i=0
+                let c=cart.count
                 var t=0.0
                 while i<c{
                     t+=cart[i].price
@@ -170,12 +170,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) 
       //  let imageV=UIImage(i![indexPath.row])
        // cell.setupCell(img: )     // we need to convert the string to an image
         //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
        cell.imageView?.image=UIImage(named: i[indexPath.row]!)
-      cell.imageView?.frame.size=CGSize(width: 100, height: 100)
+      cell.imageView?.frame.size=CGSize(width: 200, height: 200)
       //  cell.imagee.image=UIImage(named: i[indexPath.row]!)
 
         return cell
@@ -187,7 +187,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             //imageView.image = UIImage.init(named: "ImageName")
         selected=items[indexPath.row]
         let tableinfo = items[indexPath.row]
-        img.image = UIImage(named:i[indexPath.row]!)
+        img.image = UIImage(named:tableinfo.image!)
         nametxt.text = tableinfo.name
         pricetxt.text = String("\(tableinfo.price)")
         descriptiontxt.text = tableinfo.desc
@@ -197,7 +197,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func infoView(_ sender: UIButton) {
         let story = UIStoryboard(name: "InfoStoryboard", bundle: nil)
         if let infos = (story.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController) {
-         
+            infos.userdetails.text="HI, \(String(describing: user?.username))"
              self.present(infos, animated: true, completion: nil)
     }
     }

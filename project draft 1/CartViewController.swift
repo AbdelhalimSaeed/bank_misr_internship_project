@@ -90,7 +90,7 @@ class CartViewController: UIViewController,UICollectionViewDelegate, UICollectio
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 105)
+        return CGSize(width: 300, height: 200)
     }
     
     

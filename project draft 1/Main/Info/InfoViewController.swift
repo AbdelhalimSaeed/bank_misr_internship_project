@@ -9,7 +9,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-
+    @IBOutlet weak var userdetails: UILabel!
     
     @IBOutlet weak var orderlbl: UILabel!
     
@@ -33,6 +33,9 @@ class InfoViewController: UIViewController {
              self.present(HomeViewController, animated: true, completion: nil)
     }
     }
+    
+    
+    
     
     @IBAction func logOUT(_ sender: UIButton) {
         items[0].boughtItemsCount=0
