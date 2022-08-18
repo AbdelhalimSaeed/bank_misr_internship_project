@@ -29,7 +29,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="1yc-73-PAS">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="4Hr-gT-N7y" customClass="WelcomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" modalPresentationStyle="fullScreen" id="4Hr-gT-N7y" customClass="WelcomeViewController" customModule="project_draft_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9D6-sN-RfO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

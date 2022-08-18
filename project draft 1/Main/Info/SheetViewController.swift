@@ -47,16 +47,29 @@ class SheetViewController: UIViewController {
     
     
     @IBAction func addcartbtn(_ sender: UIButton){
-        if let cartdetails=cart{
-            if(!cart!.contains(selected!)){
-               cart?.append(selected!)
+        if !cart.isEmpty
+        {
+            if(!cart.contains(selected!)){
+               cart.append(selected!)
                selected!.isAddedToCart=true
         }
-        }else{
-               cart?.append(selected!)
+            else{
+                var i=0
+                while i<8{
+                    if(cart[i].name!==selected!.name!){
+                        cart[i].price=selected!.price
+                    }
+                }
+            }
+    
+        } else{
+               cart.append(selected!)
                selected!.isAddedToCart=true
         
         }
+        print(cart.count)
+        
+       
         let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
             let home = story.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
               self.present(home, animated: true, completion: nil)

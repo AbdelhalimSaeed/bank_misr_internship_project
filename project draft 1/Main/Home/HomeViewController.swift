@@ -15,7 +15,7 @@ var p: [Double] = []
 var i: [String?] = []
 var d: [String?] = []
 var items: [ProductInfo] = []
-var cart: [ProductInfo]?
+var cart: [ProductInfo]=[]
 var selected: ProductInfo?
 
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
    
     
+    @IBOutlet weak var gotocartbtn: UIButton!
     
     @IBOutlet weak var maintabel: UITableView!
     
@@ -37,20 +38,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var nametxt: UILabel!
     @IBOutlet weak var pricetxt: UILabel!
     @IBOutlet weak var descriptiontxt: UILabel!
-    @IBOutlet weak var gotocartbtn: UIButton!
+    
     
     @IBOutlet weak var imagee: UIImageView!
    
     @IBAction func addtocart(_ sender: UIButton) {
         sender.isSelected  = !sender.isSelected
+        
         let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         if (sender.isSelected)
         {
             let sheetvc = story.instantiateViewController(identifier: "SheetViewController") as! SheetViewController
               self.present(sheetvc, animated: true, completion: nil)
             
-            sheetvc.nametxt.text = nametxt.text
-            sheetvc.pricetxt.text=pricetxt.text
+            sheetvc.nametxt.text = selected!.name!
+            sheetvc.pricetxt.text=String(selected!.price)
             
             //self.navigationController?.pushViewController(sheetvc, animated: true)
         }
@@ -124,17 +126,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    @IBAction func gotocart(_ sender: UIButton) {
+        let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
+        if let cartvc = (story.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController) {
+         
+             self.present(cartvc, animated: true, completion: nil)
+    }
+    }
+    @IBAction func gotoCart(_ sender: UIButton) {
+        let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
+        if let cartvc = (story.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController) {
+         
+             self.present(cartvc, animated: true, completion: nil)
+    }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return items.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = maintabel.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! UITableViewCell
-        
-        //cell.imagee.image = UIImage(named: i[indexPath.row]!)      // we need to convert the string to an image
+        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! UITableViewCell
+      //  let imageV=UIImage(i![indexPath.row])
+       // cell.setupCell(img: )     // we need to convert the string to an image
         //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
-        /*cell.imageView = UIImageView(named: i[indexPath.row])*/
+        cell.imageView?.image=UIImage(named: i[indexPath.row]!)
+        cell.imageView?.frame.size=CGSize(width: 100, height: 100)
 
         return cell
     }
@@ -145,7 +162,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             //imageView.image = UIImage.init(named: "ImageName")
         selected=items[indexPath.row]
         let tableinfo = items[indexPath.row]
-        img.image = UIImage.init(named: "\(String(describing: tableinfo.image))")
+        img.image = UIImage(named:i[indexPath.row]!)
         nametxt.text = tableinfo.name
         pricetxt.text = String("\(tableinfo.price)")
         descriptiontxt.text = tableinfo.desc

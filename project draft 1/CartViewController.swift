@@ -7,15 +7,17 @@
 
 import UIKit
 
-class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
+class CartViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 
+ //   @IBOutlet weak var cartcell: CartCollectionViewCell!
     
+    @IBOutlet weak var carttabel: UICollectionView!
     @IBOutlet weak var gobackbtn: UIButton!
     @IBOutlet weak var paynowbtn: UIButton!
-    @IBOutlet weak var carttabel: UITableView!
+ 
+   
     
-    
-    @IBAction func gotoWelcome(_ sender: UIButton) {
+    @IBAction func payNow(_ sender: Any) {
         items[0].boughtItemsCount=0
         items[1].boughtItemsCount=0
         items[2].boughtItemsCount=0
@@ -32,6 +34,17 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         items[5].isAddedToCart=false
         items[6].isAddedToCart=false
         items[7].isAddedToCart=false
+        cart=[]
+        let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        if let home = (story.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController) {
+         
+             self.present(home, animated: true, completion: nil)
+    }
+        
+    }
+    
+    
+    @IBAction func gobackbtn(_ sender: UIButton) {
         let story = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         if let home = (story.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController) {
          
@@ -39,32 +52,44 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        carttabel.delegate=self
+        carttabel.dataSource=self
         gobackbtn.layer.cornerRadius = 20
         paynowbtn.layer.cornerRadius = 20
         
-        carttabel.register(UITableViewCell.self, forCellReuseIdentifier: "cartcell")
-        carttabel.dataSource = self
-        carttabel.delegate = self
+       
     }
-    
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return cart!.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = carttabel.dequeueReusableCell(withIdentifier: "cartcell", for: indexPath) as! UITableViewCell
-        
-        return cell
-    }
+    var select = 0
+   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !cart.isEmpty{
+           return cart.count
+        }
+        return 0
+        }
 
-    
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartcell", for: indexPath) as! CartCollectionViewCell
+            
+            cell.setUpCell(im: UIImage(imageLiteralResourceName: cart[indexPath.row].image!), nm: cart[indexPath.row].name!, pr: cart[indexPath.row].price)
+            
+            
+            return cell
+          
+        }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selected!=cart[indexPath.row]
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: 105)
+    }
     
     
     
@@ -80,3 +105,4 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     */
 
 }
+

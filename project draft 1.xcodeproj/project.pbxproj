@@ -21,9 +21,9 @@
 		964DD4DF28A9212D0027D9A6 /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4DE28A9212D0027D9A6 /* InfoStoryboard.storyboard */; };
 		964DD4F128A9246E0027D9A6 /* WelcomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964DD4F028A9246E0027D9A6 /* WelcomeStoryboard.storyboard */; };
 		964DD4F428A924850027D9A6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964DD4F328A924850027D9A6 /* WelcomeViewController.swift */; };
+		96A35B0228ADD69D009051D8 /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A35B0128ADD69D009051D8 /* CartCollectionViewCell.swift */; };
 		96B8E25B28AA5880005E0F0F /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8E25A28AA5880005E0F0F /* SheetViewController.swift */; };
 		96B8E26028AA76C9005E0F0F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8E25F28AA76C9005E0F0F /* HomeTableViewCell.swift */; };
-		96B8E26328AA76EC005E0F0F /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8E26228AA76EB005E0F0F /* CartTableViewCell.swift */; };
 		96B8E26B28AAA08D005E0F0F /* ProductInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8E26928AAA08D005E0F0F /* ProductInfo+CoreDataClass.swift */; };
 		96B8E26C28AAA08D005E0F0F /* ProductInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8E26A28AAA08D005E0F0F /* ProductInfo+CoreDataProperties.swift */; };
 		96B95B7628A6ACB500435780 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B95B7528A6ACB500435780 /* SignUpViewController.swift */; };
@@ -51,9 +51,9 @@
 		964DD4DE28A9212D0027D9A6 /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		964DD4F028A9246E0027D9A6 /* WelcomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeStoryboard.storyboard; sourceTree = "<group>"; };
 		964DD4F328A924850027D9A6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		96A35B0128ADD69D009051D8 /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
 		96B8E25A28AA5880005E0F0F /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SheetViewController.swift; path = ../Info/SheetViewController.swift; sourceTree = "<group>"; };
 		96B8E25F28AA76C9005E0F0F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		96B8E26228AA76EB005E0F0F /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		96B8E26928AAA08D005E0F0F /* ProductInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		96B8E26A28AAA08D005E0F0F /* ProductInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		96B95B7528A6ACB500435780 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				964DD4DB28A9210C0027D9A6 /* CartStoryboard.storyboard */,
+				96A35B0128ADD69D009051D8 /* CartCollectionViewCell.swift */,
 				96B95B7C28A6ACEF00435780 /* CartViewController.swift */,
-				96B8E26228AA76EB005E0F0F /* CartTableViewCell.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -260,11 +260,11 @@
 				96B95B8728A6B3A600435780 /* UserInfo+CoreDataProperties.swift in Sources */,
 				96B8E26028AA76C9005E0F0F /* HomeTableViewCell.swift in Sources */,
 				96058ABE28A6551800103303 /* InfoViewController.swift in Sources */,
+				96A35B0228ADD69D009051D8 /* CartCollectionViewCell.swift in Sources */,
 				96058ABA28A6551800103303 /* AppDelegate.swift in Sources */,
 				96B95B8628A6B3A600435780 /* UserInfo+CoreDataClass.swift in Sources */,
 				96B95B7D28A6ACEF00435780 /* CartViewController.swift in Sources */,
 				96B8E26C28AAA08D005E0F0F /* ProductInfo+CoreDataProperties.swift in Sources */,
-				96B8E26328AA76EC005E0F0F /* CartTableViewCell.swift in Sources */,
 				964DD4F428A924850027D9A6 /* WelcomeViewController.swift in Sources */,
 				96B8E26B28AAA08D005E0F0F /* ProductInfo+CoreDataClass.swift in Sources */,
 				96B95B8028A6AD0800435780 /* HomeViewController.swift in Sources */,

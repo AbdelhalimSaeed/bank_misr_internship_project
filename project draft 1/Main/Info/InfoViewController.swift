@@ -51,7 +51,8 @@ class InfoViewController: UIViewController {
         items[5].isAddedToCart=false
         items[6].isAddedToCart=false
         items[7].isAddedToCart=false
-        let story = UIStoryboard(name: "Main", bundle: nil)
+        cart=[]
+        let story = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
         if let welcome = (story.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController) {
          
              self.present(welcome, animated: true, completion: nil)
