@@ -20,6 +20,7 @@ class LogInViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         loginbtn.layer.cornerRadius = 20
         loginview.layer.cornerRadius = 20
+        hideKeyboardWhenTappedAround()
         
     }
     

@@ -35,7 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		96058AB628A6551800103303 /* project draft 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project draft 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96058AB628A6551800103303 /* AKLAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKLAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96058AB928A6551800103303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96058ABB28A6551800103303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		96058ABD28A6551800103303 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		96058AB728A6551800103303 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96058AB628A6551800103303 /* project draft 1.app */,
+				96058AB628A6551800103303 /* AKLAT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96058AB528A6551800103303 /* project draft 1 */ = {
+		96058AB528A6551800103303 /* AKLAT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96058ACD28A6551A00103303 /* Build configuration list for PBXNativeTarget "project draft 1" */;
+			buildConfigurationList = 96058ACD28A6551A00103303 /* Build configuration list for PBXNativeTarget "AKLAT" */;
 			buildPhases = (
 				96058AB228A6551800103303 /* Sources */,
 				96058AB328A6551800103303 /* Frameworks */,
@@ -195,9 +195,9 @@
 			);
 			dependencies = (
 			);
-			name = "project draft 1";
+			name = AKLAT;
 			productName = "project draft 1";
-			productReference = 96058AB628A6551800103303 /* project draft 1.app */;
+			productReference = 96058AB628A6551800103303 /* AKLAT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96058AB128A6551800103303 /* Build configuration list for PBXProject "project draft 1" */;
+			buildConfigurationList = 96058AB128A6551800103303 /* Build configuration list for PBXProject "AKLAT" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -227,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96058AB528A6551800103303 /* project draft 1 */,
+				96058AB528A6551800103303 /* AKLAT */,
 			);
 		};
 /* End PBXProject section */
@@ -452,7 +452,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96058AB128A6551800103303 /* Build configuration list for PBXProject "project draft 1" */ = {
+		96058AB128A6551800103303 /* Build configuration list for PBXProject "AKLAT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96058ACB28A6551A00103303 /* Debug */,
@@ -461,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96058ACD28A6551A00103303 /* Build configuration list for PBXNativeTarget "project draft 1" */ = {
+		96058ACD28A6551A00103303 /* Build configuration list for PBXNativeTarget "AKLAT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96058ACE28A6551A00103303 /* Debug */,

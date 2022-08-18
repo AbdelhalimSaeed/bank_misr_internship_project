@@ -37,6 +37,7 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         signupview.layer.cornerRadius = 20
         signupbtn.layer.cornerRadius = 20
+        hideKeyboardWhenTappedAround()
         //fetchInfo()
     }
     //func fetchInfo(){
@@ -109,4 +110,15 @@ class SignUpViewController: UIViewController, UITextViewDelegate {
            }
     
        }
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
     
