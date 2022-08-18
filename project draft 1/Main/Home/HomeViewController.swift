@@ -53,6 +53,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             sheetvc.nametxt.text = selected!.name!
             sheetvc.pricetxt.text=String(selected!.price)
+            sheetvc.itemimg.image=UIImage(named:selected!.image!)
             
             //self.navigationController?.pushViewController(sheetvc, animated: true)
         }
@@ -129,8 +130,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func gotocart(_ sender: UIButton) {
         let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
         if let cartvc = (story.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController) {
-            if cart.isEmpty{
-                cartvc.totalprice.text=String(0)
+           /* if cart.isEmpty{
+                cartvc.totalprice.text="0"
             }
             else{
                 let i=0
@@ -140,7 +141,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     t+=cart[i].price
                }
                 cartvc.totalprice.text=String(t)
-            }
+            }*/
             
              self.present(cartvc, animated: true, completion: nil)
     }
@@ -148,8 +149,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func gotoCart(_ sender: UIButton) {
         let story = UIStoryboard(name: "CartStoryboard", bundle: nil)
         if let cartvc = (story.instantiateViewController(withIdentifier: "CartViewController") as? CartViewController) {
-            if cart.isEmpty{
-                cartvc.totalprice.text=String(0)
+           /* if cart.isEmpty{
+                cartvc.totalprice.text="0"
             }
             else{
                 let i=0
@@ -159,7 +160,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     t+=cart[i].price
                }
                 cartvc.totalprice.text=String(t)
-            }
+            }*/
          
              self.present(cartvc, animated: true, completion: nil)
     }
@@ -170,7 +171,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath)
       //  let imageV=UIImage(i![indexPath.row])
        // cell.setupCell(img: )     // we need to convert the string to an image
         //guard let image = items[UIImagePickerControllerEditedImage] as? UIImage else { return }
@@ -197,7 +198,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func infoView(_ sender: UIButton) {
         let story = UIStoryboard(name: "InfoStoryboard", bundle: nil)
         if let infos = (story.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController) {
-            infos.userdetails.text="HI, \(String(describing: user?.username))"
+            /*do {try infos.userdetails.text="HI, \(String(describing: user?.username))"}
+            catch{
+            
+            }*/
              self.present(infos, animated: true, completion: nil)
     }
     }

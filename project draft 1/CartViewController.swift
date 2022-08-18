@@ -76,7 +76,7 @@ class CartViewController: UIViewController,UICollectionViewDelegate, UICollectio
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartcell", for: indexPath) as! Cart1CollectionViewCell
             
-            cell.setUpCell(im: UIImage(imageLiteralResourceName: cart[indexPath.row].image!), nm: cart[indexPath.row].name!, pr: cart[indexPath.row].price)
+            cell.setUpCell(im: UIImage(imageLiteralResourceName: cart[indexPath.row].image!), nm: cart[indexPath.row].name!, pr: cart[indexPath.row].price*Double(cart[indexPath.row].boughtItemsCount))
             
             
             return cell
