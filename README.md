@@ -31,9 +31,10 @@ Food App is a Swift-based iOS application that allows users to explore a variety
    ```bash
    git clone https://github.com/AbdelhalimSaeed/bank_misr_internship_project.git
 2. Open the Xcode project.
+  ```bash
   cd foodie-app
   open FoodieApp.xcodeproj
-3. Build and run the project in Xcode.
+4. Build and run the project in Xcode.
 
 ### Usage
 1. Launch the app on your iOS device or simulator.
